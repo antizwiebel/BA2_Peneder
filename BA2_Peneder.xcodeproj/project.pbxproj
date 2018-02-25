@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1193B93F203EC5490026FF00 /* CategoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1193B93E203EC5490026FF00 /* CategoryDetailViewController.swift */; };
+		1193B941203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1193B940203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift */; };
+		1193B943203EC9630026FF00 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1193B942203EC9630026FF00 /* UITableView+Reusable.swift */; };
 		11CC9AB1203DC9BC00CE888E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AB0203DC9BC00CE888E /* AppDelegate.swift */; };
 		11CC9AB3203DC9BC00CE888E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AB2203DC9BC00CE888E /* FirstViewController.swift */; };
 		11CC9AB5203DC9BC00CE888E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AB4203DC9BC00CE888E /* SecondViewController.swift */; };
@@ -15,6 +18,23 @@
 		11CC9ABD203DC9BC00CE888E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11CC9ABB203DC9BC00CE888E /* LaunchScreen.storyboard */; };
 		11CC9AC8203DC9BC00CE888E /* BA2_PenederTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AC7203DC9BC00CE888E /* BA2_PenederTests.swift */; };
 		11CC9AD3203DC9BC00CE888E /* BA2_PenederUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AD2203DC9BC00CE888E /* BA2_PenederUITests.swift */; };
+		11CC9AE1203DD57200CE888E /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AE0203DD57200CE888E /* CategoryListViewController.swift */; };
+		11CC9AE3203DD60400CE888E /* CategoryListViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AE2203DD60400CE888E /* CategoryListViewController+CollectionView.swift */; };
+		11CC9AE5203DD9BB00CE888E /* BaseCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AE4203DD9BB00CE888E /* BaseCategoryCell.swift */; };
+		11CC9AED203DDD0600CE888E /* WeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AEB203DDD0600CE888E /* WeatherCollectionViewCell.swift */; };
+		11CC9AEE203DDD0600CE888E /* WeatherCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11CC9AEC203DDD0600CE888E /* WeatherCollectionViewCell.xib */; };
+		11CC9AF1203DE35400CE888E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AF0203DE35400CE888E /* Reusable.swift */; };
+		11CC9AF3203DE37800CE888E /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AF2203DE37800CE888E /* UICollectionView+Reusable.swift */; };
+		11CC9AFA203DE50400CE888E /* CategoryDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AF9203DE50400CE888E /* CategoryDetailTableViewController.swift */; };
+		11CC9AFE203DE8EC00CE888E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AFD203DE8EC00CE888E /* BaseView.swift */; };
+		11CC9B00203DE91A00CE888E /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AFF203DE91A00CE888E /* UIView+Constraints.swift */; };
+		11CC9B02203DFBF000CE888E /* UIImageView+RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9B01203DFBF000CE888E /* UIImageView+RoundedCorners.swift */; };
+		11E99EFC203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E99EFA203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.swift */; };
+		11E99EFD203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11E99EFB203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.xib */; };
+		11E99F00203EB6D500DCCDD1 /* CategoryItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E99EFE203EB6D500DCCDD1 /* CategoryItemTableViewCell.swift */; };
+		11E99F01203EB6D500DCCDD1 /* CategoryItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11E99EFF203EB6D500DCCDD1 /* CategoryItemTableViewCell.xib */; };
+		11F241992040CF6C00DBDB34 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F241982040CF6C00DBDB34 /* Category.swift */; };
+		11F2419B2040D02900DBDB34 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2419A2040D02900DBDB34 /* CategoryItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1193B93E203EC5490026FF00 /* CategoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailViewController.swift; sourceTree = "<group>"; };
+		1193B940203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryDetailViewController+TableView.swift"; sourceTree = "<group>"; };
+		1193B942203EC9630026FF00 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		11CC9AAD203DC9BC00CE888E /* BA2_Peneder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BA2_Peneder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11CC9AB0203DC9BC00CE888E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11CC9AB2203DC9BC00CE888E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +72,23 @@
 		11CC9ACE203DC9BC00CE888E /* BA2_PenederUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BA2_PenederUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11CC9AD2203DC9BC00CE888E /* BA2_PenederUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BA2_PenederUITests.swift; sourceTree = "<group>"; };
 		11CC9AD4203DC9BC00CE888E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11CC9AE0203DD57200CE888E /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
+		11CC9AE2203DD60400CE888E /* CategoryListViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryListViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		11CC9AE4203DD9BB00CE888E /* BaseCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCategoryCell.swift; sourceTree = "<group>"; };
+		11CC9AEB203DDD0600CE888E /* WeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCollectionViewCell.swift; sourceTree = "<group>"; };
+		11CC9AEC203DDD0600CE888E /* WeatherCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherCollectionViewCell.xib; sourceTree = "<group>"; };
+		11CC9AF0203DE35400CE888E /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		11CC9AF2203DE37800CE888E /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
+		11CC9AF9203DE50400CE888E /* CategoryDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailTableViewController.swift; sourceTree = "<group>"; };
+		11CC9AFD203DE8EC00CE888E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		11CC9AFF203DE91A00CE888E /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		11CC9B01203DFBF000CE888E /* UIImageView+RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+RoundedCorners.swift"; sourceTree = "<group>"; };
+		11E99EFA203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryOverviewTableViewCell.swift; sourceTree = "<group>"; };
+		11E99EFB203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryOverviewTableViewCell.xib; sourceTree = "<group>"; };
+		11E99EFE203EB6D500DCCDD1 /* CategoryItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemTableViewCell.swift; sourceTree = "<group>"; };
+		11E99EFF203EB6D500DCCDD1 /* CategoryItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryItemTableViewCell.xib; sourceTree = "<group>"; };
+		11F241982040CF6C00DBDB34 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		11F2419A2040D02900DBDB34 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +139,8 @@
 		11CC9AAF203DC9BC00CE888E /* BA2_Peneder */ = {
 			isa = PBXGroup;
 			children = (
+				11F241972040CCEA00DBDB34 /* Datamodel */,
+				11CC9AEF203DE31E00CE888E /* Utility */,
 				11CC9AB0203DC9BC00CE888E /* AppDelegate.swift */,
 				11CC9AB2203DC9BC00CE888E /* FirstViewController.swift */,
 				11CC9AB4203DC9BC00CE888E /* SecondViewController.swift */,
@@ -106,6 +148,13 @@
 				11CC9AB9203DC9BC00CE888E /* Assets.xcassets */,
 				11CC9ABB203DC9BC00CE888E /* LaunchScreen.storyboard */,
 				11CC9ABE203DC9BC00CE888E /* Info.plist */,
+				11CC9AF4203DE42000CE888E /* Animations */,
+				11CC9AE0203DD57200CE888E /* CategoryListViewController.swift */,
+				11CC9AE2203DD60400CE888E /* CategoryListViewController+CollectionView.swift */,
+				11CC9AF9203DE50400CE888E /* CategoryDetailTableViewController.swift */,
+				11CC9AE6203DD9C200CE888E /* Cells */,
+				1193B93E203EC5490026FF00 /* CategoryDetailViewController.swift */,
+				1193B940203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift */,
 			);
 			path = BA2_Peneder;
 			sourceTree = "<group>";
@@ -126,6 +175,49 @@
 				11CC9AD4203DC9BC00CE888E /* Info.plist */,
 			);
 			path = BA2_PenederUITests;
+			sourceTree = "<group>";
+		};
+		11CC9AE6203DD9C200CE888E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				11CC9AE4203DD9BB00CE888E /* BaseCategoryCell.swift */,
+				11CC9AEB203DDD0600CE888E /* WeatherCollectionViewCell.swift */,
+				11CC9AEC203DDD0600CE888E /* WeatherCollectionViewCell.xib */,
+				11E99EFA203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.swift */,
+				11E99EFB203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.xib */,
+				11E99EFE203EB6D500DCCDD1 /* CategoryItemTableViewCell.swift */,
+				11E99EFF203EB6D500DCCDD1 /* CategoryItemTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		11CC9AEF203DE31E00CE888E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				11CC9AF0203DE35400CE888E /* Reusable.swift */,
+				11CC9AF2203DE37800CE888E /* UICollectionView+Reusable.swift */,
+				11CC9AFD203DE8EC00CE888E /* BaseView.swift */,
+				11CC9AFF203DE91A00CE888E /* UIView+Constraints.swift */,
+				11CC9B01203DFBF000CE888E /* UIImageView+RoundedCorners.swift */,
+				1193B942203EC9630026FF00 /* UITableView+Reusable.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		11CC9AF4203DE42000CE888E /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		11F241972040CCEA00DBDB34 /* Datamodel */ = {
+			isa = PBXGroup;
+			children = (
+				11F241982040CF6C00DBDB34 /* Category.swift */,
+				11F2419A2040D02900DBDB34 /* CategoryItem.swift */,
+			);
+			path = Datamodel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +328,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				11CC9ABD203DC9BC00CE888E /* LaunchScreen.storyboard in Resources */,
+				11CC9AEE203DDD0600CE888E /* WeatherCollectionViewCell.xib in Resources */,
 				11CC9ABA203DC9BC00CE888E /* Assets.xcassets in Resources */,
+				11E99EFD203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.xib in Resources */,
+				11E99F01203EB6D500DCCDD1 /* CategoryItemTableViewCell.xib in Resources */,
 				11CC9AB8203DC9BC00CE888E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,9 +357,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11CC9B02203DFBF000CE888E /* UIImageView+RoundedCorners.swift in Sources */,
+				1193B93F203EC5490026FF00 /* CategoryDetailViewController.swift in Sources */,
+				11F241992040CF6C00DBDB34 /* Category.swift in Sources */,
+				11CC9AE5203DD9BB00CE888E /* BaseCategoryCell.swift in Sources */,
+				11E99EFC203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.swift in Sources */,
+				1193B943203EC9630026FF00 /* UITableView+Reusable.swift in Sources */,
+				1193B941203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift in Sources */,
+				11CC9AFA203DE50400CE888E /* CategoryDetailTableViewController.swift in Sources */,
+				11CC9AE3203DD60400CE888E /* CategoryListViewController+CollectionView.swift in Sources */,
+				11CC9B00203DE91A00CE888E /* UIView+Constraints.swift in Sources */,
+				11CC9AE1203DD57200CE888E /* CategoryListViewController.swift in Sources */,
 				11CC9AB5203DC9BC00CE888E /* SecondViewController.swift in Sources */,
+				11CC9AF1203DE35400CE888E /* Reusable.swift in Sources */,
 				11CC9AB1203DC9BC00CE888E /* AppDelegate.swift in Sources */,
+				11CC9AF3203DE37800CE888E /* UICollectionView+Reusable.swift in Sources */,
 				11CC9AB3203DC9BC00CE888E /* FirstViewController.swift in Sources */,
+				11CC9AFE203DE8EC00CE888E /* BaseView.swift in Sources */,
+				11E99F00203EB6D500DCCDD1 /* CategoryItemTableViewCell.swift in Sources */,
+				11F2419B2040D02900DBDB34 /* CategoryItem.swift in Sources */,
+				11CC9AED203DDD0600CE888E /* WeatherCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +545,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 44GSE3RUH5;
 				INFOPLIST_FILE = BA2_Peneder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "at.fh.ooe.peneder.BA2-Peneder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -448,6 +561,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 44GSE3RUH5;
 				INFOPLIST_FILE = BA2_Peneder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "at.fh.ooe.peneder.BA2-Peneder";
 				PRODUCT_NAME = "$(TARGET_NAME)";
