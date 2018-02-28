@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1153EA6620441FD700A5E038 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153EA6520441FD700A5E038 /* UIColorExtension.swift */; };
+		1153EA6820443EA100A5E038 /* CategoryItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153EA6720443EA100A5E038 /* CategoryItemViewController.swift */; };
+		1153EA6A20443EC300A5E038 /* CategoryItemViewController+TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153EA6920443EC300A5E038 /* CategoryItemViewController+TableViewController.swift */; };
+		116654A72042FBD800976B29 /* NewRuleViewController+TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116654A62042FBD800976B29 /* NewRuleViewController+TableViewController.swift */; };
+		116654AB20430D8500976B29 /* NewRuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116654A920430D8500976B29 /* NewRuleTableViewCell.swift */; };
+		116654AC20430D8500976B29 /* NewRuleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 116654AA20430D8500976B29 /* NewRuleTableViewCell.xib */; };
+		116654AE20430F6A00976B29 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116654AD20430F6A00976B29 /* Rule.swift */; };
+		116654B02043137F00976B29 /* RulePart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116654AF2043137F00976B29 /* RulePart.swift */; };
+		116654B22043162500976B29 /* LogicalOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116654B12043162500976B29 /* LogicalOperator.swift */; };
 		1193B93F203EC5490026FF00 /* CategoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1193B93E203EC5490026FF00 /* CategoryDetailViewController.swift */; };
 		1193B941203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1193B940203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift */; };
 		1193B943203EC9630026FF00 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1193B942203EC9630026FF00 /* UITableView+Reusable.swift */; };
 		11CC9AB1203DC9BC00CE888E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AB0203DC9BC00CE888E /* AppDelegate.swift */; };
 		11CC9AB3203DC9BC00CE888E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AB2203DC9BC00CE888E /* FirstViewController.swift */; };
-		11CC9AB5203DC9BC00CE888E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AB4203DC9BC00CE888E /* SecondViewController.swift */; };
+		11CC9AB5203DC9BC00CE888E /* NewRuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AB4203DC9BC00CE888E /* NewRuleViewController.swift */; };
 		11CC9AB8203DC9BC00CE888E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11CC9AB6203DC9BC00CE888E /* Main.storyboard */; };
 		11CC9ABA203DC9BC00CE888E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11CC9AB9203DC9BC00CE888E /* Assets.xcassets */; };
 		11CC9ABD203DC9BC00CE888E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11CC9ABB203DC9BC00CE888E /* LaunchScreen.storyboard */; };
@@ -25,7 +34,6 @@
 		11CC9AEE203DDD0600CE888E /* WeatherCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11CC9AEC203DDD0600CE888E /* WeatherCollectionViewCell.xib */; };
 		11CC9AF1203DE35400CE888E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AF0203DE35400CE888E /* Reusable.swift */; };
 		11CC9AF3203DE37800CE888E /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AF2203DE37800CE888E /* UICollectionView+Reusable.swift */; };
-		11CC9AFA203DE50400CE888E /* CategoryDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AF9203DE50400CE888E /* CategoryDetailTableViewController.swift */; };
 		11CC9AFE203DE8EC00CE888E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AFD203DE8EC00CE888E /* BaseView.swift */; };
 		11CC9B00203DE91A00CE888E /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AFF203DE91A00CE888E /* UIView+Constraints.swift */; };
 		11CC9B02203DFBF000CE888E /* UIImageView+RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9B01203DFBF000CE888E /* UIImageView+RoundedCorners.swift */; };
@@ -55,13 +63,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1153EA6520441FD700A5E038 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		1153EA6720443EA100A5E038 /* CategoryItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemViewController.swift; sourceTree = "<group>"; };
+		1153EA6920443EC300A5E038 /* CategoryItemViewController+TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryItemViewController+TableViewController.swift"; sourceTree = "<group>"; };
+		116654A62042FBD800976B29 /* NewRuleViewController+TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewRuleViewController+TableViewController.swift"; sourceTree = "<group>"; };
+		116654A920430D8500976B29 /* NewRuleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRuleTableViewCell.swift; sourceTree = "<group>"; };
+		116654AA20430D8500976B29 /* NewRuleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewRuleTableViewCell.xib; sourceTree = "<group>"; };
+		116654AD20430F6A00976B29 /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		116654AF2043137F00976B29 /* RulePart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulePart.swift; sourceTree = "<group>"; };
+		116654B12043162500976B29 /* LogicalOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicalOperator.swift; sourceTree = "<group>"; };
 		1193B93E203EC5490026FF00 /* CategoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailViewController.swift; sourceTree = "<group>"; };
 		1193B940203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryDetailViewController+TableView.swift"; sourceTree = "<group>"; };
 		1193B942203EC9630026FF00 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		11CC9AAD203DC9BC00CE888E /* BA2_Peneder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BA2_Peneder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11CC9AB0203DC9BC00CE888E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11CC9AB2203DC9BC00CE888E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		11CC9AB4203DC9BC00CE888E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		11CC9AB4203DC9BC00CE888E /* NewRuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRuleViewController.swift; sourceTree = "<group>"; };
 		11CC9AB7203DC9BC00CE888E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11CC9AB9203DC9BC00CE888E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11CC9ABC203DC9BC00CE888E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,7 +96,6 @@
 		11CC9AEC203DDD0600CE888E /* WeatherCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherCollectionViewCell.xib; sourceTree = "<group>"; };
 		11CC9AF0203DE35400CE888E /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		11CC9AF2203DE37800CE888E /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
-		11CC9AF9203DE50400CE888E /* CategoryDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailTableViewController.swift; sourceTree = "<group>"; };
 		11CC9AFD203DE8EC00CE888E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		11CC9AFF203DE91A00CE888E /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		11CC9B01203DFBF000CE888E /* UIImageView+RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+RoundedCorners.swift"; sourceTree = "<group>"; };
@@ -116,6 +132,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		116654A82042FBE500976B29 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				11CC9AB4203DC9BC00CE888E /* NewRuleViewController.swift */,
+				116654A62042FBD800976B29 /* NewRuleViewController+TableViewController.swift */,
+				11CC9AE0203DD57200CE888E /* CategoryListViewController.swift */,
+				11CC9AE2203DD60400CE888E /* CategoryListViewController+CollectionView.swift */,
+				1193B93E203EC5490026FF00 /* CategoryDetailViewController.swift */,
+				1193B940203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift */,
+				1153EA6720443EA100A5E038 /* CategoryItemViewController.swift */,
+				1153EA6920443EC300A5E038 /* CategoryItemViewController+TableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		11CC9AA4203DC9BC00CE888E = {
 			isa = PBXGroup;
 			children = (
@@ -139,22 +170,18 @@
 		11CC9AAF203DC9BC00CE888E /* BA2_Peneder */ = {
 			isa = PBXGroup;
 			children = (
+				116654A82042FBE500976B29 /* ViewControllers */,
 				11F241972040CCEA00DBDB34 /* Datamodel */,
 				11CC9AEF203DE31E00CE888E /* Utility */,
 				11CC9AB0203DC9BC00CE888E /* AppDelegate.swift */,
 				11CC9AB2203DC9BC00CE888E /* FirstViewController.swift */,
-				11CC9AB4203DC9BC00CE888E /* SecondViewController.swift */,
 				11CC9AB6203DC9BC00CE888E /* Main.storyboard */,
 				11CC9AB9203DC9BC00CE888E /* Assets.xcassets */,
 				11CC9ABB203DC9BC00CE888E /* LaunchScreen.storyboard */,
 				11CC9ABE203DC9BC00CE888E /* Info.plist */,
 				11CC9AF4203DE42000CE888E /* Animations */,
-				11CC9AE0203DD57200CE888E /* CategoryListViewController.swift */,
-				11CC9AE2203DD60400CE888E /* CategoryListViewController+CollectionView.swift */,
-				11CC9AF9203DE50400CE888E /* CategoryDetailTableViewController.swift */,
 				11CC9AE6203DD9C200CE888E /* Cells */,
-				1193B93E203EC5490026FF00 /* CategoryDetailViewController.swift */,
-				1193B940203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift */,
+				1153EA6520441FD700A5E038 /* UIColorExtension.swift */,
 			);
 			path = BA2_Peneder;
 			sourceTree = "<group>";
@@ -187,6 +214,8 @@
 				11E99EFB203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.xib */,
 				11E99EFE203EB6D500DCCDD1 /* CategoryItemTableViewCell.swift */,
 				11E99EFF203EB6D500DCCDD1 /* CategoryItemTableViewCell.xib */,
+				116654A920430D8500976B29 /* NewRuleTableViewCell.swift */,
+				116654AA20430D8500976B29 /* NewRuleTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -216,6 +245,9 @@
 			children = (
 				11F241982040CF6C00DBDB34 /* Category.swift */,
 				11F2419A2040D02900DBDB34 /* CategoryItem.swift */,
+				116654AD20430F6A00976B29 /* Rule.swift */,
+				116654AF2043137F00976B29 /* RulePart.swift */,
+				116654B12043162500976B29 /* LogicalOperator.swift */,
 			);
 			path = Datamodel;
 			sourceTree = "<group>";
@@ -329,6 +361,7 @@
 			files = (
 				11CC9ABD203DC9BC00CE888E /* LaunchScreen.storyboard in Resources */,
 				11CC9AEE203DDD0600CE888E /* WeatherCollectionViewCell.xib in Resources */,
+				116654AC20430D8500976B29 /* NewRuleTableViewCell.xib in Resources */,
 				11CC9ABA203DC9BC00CE888E /* Assets.xcassets in Resources */,
 				11E99EFD203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.xib in Resources */,
 				11E99F01203EB6D500DCCDD1 /* CategoryItemTableViewCell.xib in Resources */,
@@ -357,19 +390,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				116654AB20430D8500976B29 /* NewRuleTableViewCell.swift in Sources */,
 				11CC9B02203DFBF000CE888E /* UIImageView+RoundedCorners.swift in Sources */,
 				1193B93F203EC5490026FF00 /* CategoryDetailViewController.swift in Sources */,
+				116654AE20430F6A00976B29 /* Rule.swift in Sources */,
+				1153EA6820443EA100A5E038 /* CategoryItemViewController.swift in Sources */,
 				11F241992040CF6C00DBDB34 /* Category.swift in Sources */,
+				116654B02043137F00976B29 /* RulePart.swift in Sources */,
 				11CC9AE5203DD9BB00CE888E /* BaseCategoryCell.swift in Sources */,
 				11E99EFC203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.swift in Sources */,
 				1193B943203EC9630026FF00 /* UITableView+Reusable.swift in Sources */,
 				1193B941203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift in Sources */,
-				11CC9AFA203DE50400CE888E /* CategoryDetailTableViewController.swift in Sources */,
+				116654A72042FBD800976B29 /* NewRuleViewController+TableViewController.swift in Sources */,
 				11CC9AE3203DD60400CE888E /* CategoryListViewController+CollectionView.swift in Sources */,
 				11CC9B00203DE91A00CE888E /* UIView+Constraints.swift in Sources */,
 				11CC9AE1203DD57200CE888E /* CategoryListViewController.swift in Sources */,
-				11CC9AB5203DC9BC00CE888E /* SecondViewController.swift in Sources */,
+				11CC9AB5203DC9BC00CE888E /* NewRuleViewController.swift in Sources */,
+				116654B22043162500976B29 /* LogicalOperator.swift in Sources */,
 				11CC9AF1203DE35400CE888E /* Reusable.swift in Sources */,
+				1153EA6A20443EC300A5E038 /* CategoryItemViewController+TableViewController.swift in Sources */,
+				1153EA6620441FD700A5E038 /* UIColorExtension.swift in Sources */,
 				11CC9AB1203DC9BC00CE888E /* AppDelegate.swift in Sources */,
 				11CC9AF3203DE37800CE888E /* UICollectionView+Reusable.swift in Sources */,
 				11CC9AB3203DC9BC00CE888E /* FirstViewController.swift in Sources */,

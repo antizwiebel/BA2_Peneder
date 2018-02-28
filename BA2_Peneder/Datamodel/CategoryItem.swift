@@ -10,11 +10,12 @@ import Foundation
 
 public class CategoryItem {
     
-    public var fuzzyValues = [String] ()
+    public var fuzzyValues : [String]
     public var name: String
     
     init(name: String, fuzzyValues: [String]) {
         self.name = name
         self.fuzzyValues = fuzzyValues
+        
     }
 }

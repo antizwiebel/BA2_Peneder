@@ -13,7 +13,7 @@ public class Category {
     
     public var title: String = "Test"
     public var subTitle: String = "This is a category subtitle"
-    public var categoryItems = [CategoryItem] ()
+    public var categoryItems : [CategoryItem]
     public var image: UIImage?
     
     init(categoryTitle: String, categorySubTitle: String, categoryItems: [CategoryItem], image: UIImage) {

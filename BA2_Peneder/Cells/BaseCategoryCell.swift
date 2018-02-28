@@ -64,9 +64,9 @@ class BaseCategoryCell: UICollectionViewCell {
     
     private func applyShadow(width: CGFloat, height: CGFloat) {
         if let shadowView = shadowView {
-            let shadowPath = UIBezierPath(roundedRect: shadowView.bounds, cornerRadius: 14.0)
+            let shadowPath = UIBezierPath(roundedRect: shadowView.bounds, cornerRadius: 12.0)
             shadowView.layer.masksToBounds = false
-            shadowView.layer.shadowRadius = 8.0
+            shadowView.layer.shadowRadius = 6.0
             shadowView.layer.shadowColor = UIColor.black.cgColor
             shadowView.layer.shadowOffset = CGSize(width: width, height: height)
             shadowView.layer.shadowOpacity = 0.35
