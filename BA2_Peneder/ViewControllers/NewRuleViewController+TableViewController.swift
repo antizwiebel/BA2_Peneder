@@ -15,8 +15,9 @@ extension NewRuleViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         tableView.dataSource = self
         tableView.delegate = self
-        
-        rule = Rule ()
+        if (rule == nil) {
+            rule = Rule ()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -127,7 +128,6 @@ extension NewRuleViewController: UITableViewDelegate, UITableViewDataSource {
             selectedRulePartIndex = getIndexCodeForSelectedCell (index: indexPath.row)
             print(selectedRulePartIndex)
             performSegue(withIdentifier: "selectRulePart", sender: self)
-            
         }
         
         self.tableView.reloadData()

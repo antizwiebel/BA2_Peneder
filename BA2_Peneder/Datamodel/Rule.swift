@@ -6,13 +6,15 @@
 //  Copyright © 2018 Mark Peneder. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class Rule {
+class Rule: CustomStringConvertible {
+    
     public var title: String
     public var antecedents: [RulePart]?
     public var consequent: RulePart?
     public var logicalOperators: [LogicalOperator]?
+    public var ruleImage: UIImage?
     
     init(antecedents: [RulePart], consequent: RulePart, title: String, logicalOperators: [LogicalOperator]) {
         self.antecedents = antecedents
@@ -25,5 +27,25 @@ class Rule {
         self.title = "My rule"
         self.antecedents = [RulePart] ()
         self.logicalOperators = [LogicalOperator] ()
+    }
+    
+    var description: String { return buildRuleString() }
+
+    ///the string-representation of a rule that is later used to save it in a file
+    internal func buildRuleString() -> String {
+        var ruleString = "EMPTY"
+        if self.consequent != nil {
+            ruleString = String(describing: self.consequent!)
+        }
+        if self.antecedents?.count ?? 0 > 0 {
+            let antecedentCount = self.antecedents?.count ?? 1
+            for index in 0...(antecedentCount-1) {
+                ruleString = ruleString + "\n" + String(describing: self.antecedents![index])
+                if (index != antecedentCount-1) {
+                    ruleString = ruleString + "\n" + String(describing: self.logicalOperators![index+1])
+                }
+            }
+        }
+        return ruleString
     }
 }

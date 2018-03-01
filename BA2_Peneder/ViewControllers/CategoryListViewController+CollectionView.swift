@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 extension CategoryListViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+
     
     internal func configure(collectionView: UICollectionView) {
         
@@ -28,17 +29,6 @@ extension CategoryListViewController: UICollectionViewDataSource, UICollectionVi
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
     }
     
-    /// just a testing function
-    internal func initSampleCategories() {
-        let sampleCategoryItem = CategoryItem(name: "temperature", fuzzyValues: ["Test1", "Sample2", "Example3"])
-        let sampleCategoryItem2 = CategoryItem(name: "weather", fuzzyValues: ["Sample2", "Test1", "Example3"])
-        let sampleCategoryItem3 = CategoryItem(name: "sports", fuzzyValues: ["Test1", "Sample2", "Example3"])
-        let sampleCategoryItems = [sampleCategoryItem, sampleCategoryItem2, sampleCategoryItem3]
-        
-        categories.append(Category(categoryTitle: "Weather", categorySubTitle: "All items concerning temperature and weather", categoryItems: sampleCategoryItems, image: UIImage(named: "Weather")!))
-        categories.append(Category(categoryTitle: "Running", categorySubTitle: "Everything about running outdoors", categoryItems: sampleCategoryItems, image: UIImage(named: "Running")!))
-        categories.append(Category(categoryTitle: "Health", categorySubTitle: "", categoryItems: sampleCategoryItems, image: UIImage(named: "Health")!))
-    }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -47,7 +37,7 @@ extension CategoryListViewController: UICollectionViewDataSource, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categories.count
     }
-    
+        
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = WeatherCollectionViewCell.dequeue(fromCollectionView: collectionView, atIndexPath: indexPath)
         cell.titleLabel.text = categories[indexPath.row].title
@@ -58,15 +48,44 @@ extension CategoryListViewController: UICollectionViewDataSource, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: collectionView.bounds.width, height: BaseCategoryCell.cellHeight)
-        
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return CGSize(width: collectionView.bounds.width, height: BaseCategoryCell.cellHeight)
+        } else {
+            
+            // Number of Items per Row
+            let numberOfItemsInRow = 2
+            
+            // Current Row Number
+            let rowNumber = indexPath.item/numberOfItemsInRow
+            
+            // Compressed With
+            let compressedWidth = collectionView.bounds.width/3
+            
+            // Expanded Width
+            let expandedWidth = (collectionView.bounds.width/3) * 2
+            
+            // Is Even Row
+            let isEvenRow = rowNumber % 2 == 0
+            
+            // Is First Item in Row
+            let isFirstItem = indexPath.item % numberOfItemsInRow != 0
+            
+            // Calculate Width
+            var width: CGFloat = 0.0
+            if isEvenRow {
+                width = isFirstItem ? compressedWidth : expandedWidth
+            } else {
+                width = isFirstItem ? expandedWidth : compressedWidth
+            }
+            
+            return CGSize(width: width, height: BaseCategoryCell.cellHeight)
+        }
     }
     
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) {
-            //presentStoryAnimationController.selectedCardFrame = cell.frame
             //dismissStoryAnimationController.selectedCardFrame = cell.frame
             self.selectedCategory = categories[indexPath.row]
             performSegue(withIdentifier: "showDetail", sender: self)

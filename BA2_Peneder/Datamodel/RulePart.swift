@@ -9,7 +9,7 @@
 import Foundation
 
 /// represents either an antecedent or a precedent in a rule
-class RulePart {
+class RulePart: CustomStringConvertible {
     public var variable: String
     public var hedge: String
     public var fuzzyValue: String
@@ -25,4 +25,7 @@ class RulePart {
         self.fuzzyValue = ""
         self.hedge = ""
     }
+    
+    var description: String { return variable + ";" + hedge + ";" + fuzzyValue }
+
 }

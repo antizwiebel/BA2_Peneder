@@ -11,6 +11,7 @@ import UIKit
 
 extension CategoryDetailViewController: UITableViewDelegate, UITableViewDataSource {
     
+    
     internal func configure(tableView: UITableView) {
         tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         tableView.dataSource = self
@@ -32,13 +33,11 @@ extension CategoryDetailViewController: UITableViewDelegate, UITableViewDataSour
                 tableView.register(UINib(nibName: "CategoryOverviewTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoryOverviewCell")
                 cell = tableView.dequeueReusableCell(withIdentifier: "CategoryOverviewCell") as! CategoryOverviewTableViewCell!
             }
-            cell?.separatorInset = UIEdgeInsets.zero
-            cell?.preservesSuperviewLayoutMargins = false
-            cell?.layoutMargins = UIEdgeInsets.zero
             cell?.selectionStyle = UITableViewCellSelectionStyle.none
             cell?.titleLabel.text = category?.title ?? "N/A"
-            cell?.subTitleLabel.text = category?.subTitle ?? "N/A"
+            cell?.subTitleLabel.text = "Select the variable and its value" //category?.subTitle ?? "N/A"
             cell?.imageView?.image = category?.image ?? UIImage (named: "Weather")
+            cell?.imageView?.contentMode = UIViewContentMode.scaleAspectFill
             return cell!
         }
 
@@ -54,18 +53,19 @@ extension CategoryDetailViewController: UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row != 0{
+            self.tableView.deselectRow(at: indexPath, animated: true)
             let cell = tableView.cellForRow(at: indexPath) as? CategoryItemTableViewCell
+
             self.selectedCategoryItem = category?.categoryItems[indexPath.row-1]
             cell?.setSelected(false, animated: true)
-            self.tableView.deselectRow(at: IndexPath(row: 0, section: 0) , animated: true)
-            self.tableView.deselectRow(at: indexPath, animated: true)
+            
             performSegue(withIdentifier: "showValues", sender: self)
         }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 && indexPath.row == 0 {
-            return 250
+            return 200
         }
         
         return 100

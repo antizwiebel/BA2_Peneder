@@ -16,9 +16,18 @@
 		116654AE20430F6A00976B29 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116654AD20430F6A00976B29 /* Rule.swift */; };
 		116654B02043137F00976B29 /* RulePart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116654AF2043137F00976B29 /* RulePart.swift */; };
 		116654B22043162500976B29 /* LogicalOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116654B12043162500976B29 /* LogicalOperator.swift */; };
+		117CCBEE204807260051114E /* RuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117CCBEC204807260051114E /* RuleTableViewCell.swift */; };
+		117CCBEF204807260051114E /* RuleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117CCBED204807260051114E /* RuleTableViewCell.xib */; };
+		117CCBF120480D540051114E /* MyRulesViewController+TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117CCBF020480D540051114E /* MyRulesViewController+TableViewController.swift */; };
+		117CCBF320484EFB0051114E /* OrientationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117CCBF220484EFB0051114E /* OrientationUtility.swift */; };
+		117CCBF52048676E0051114E /* ImageView+BlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117CCBF42048676E0051114E /* ImageView+BlurEffect.swift */; };
 		1193B93F203EC5490026FF00 /* CategoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1193B93E203EC5490026FF00 /* CategoryDetailViewController.swift */; };
 		1193B941203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1193B940203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift */; };
 		1193B943203EC9630026FF00 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1193B942203EC9630026FF00 /* UITableView+Reusable.swift */; };
+		11A31BCF2046BF65000C515E /* Category+ExampleCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A31BCE2046BF65000C515E /* Category+ExampleCategories.swift */; };
+		11A31BD12046D5C6000C515E /* MyRulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A31BD02046D5C6000C515E /* MyRulesViewController.swift */; };
+		11A31BD520476181000C515E /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A31BD420476181000C515E /* Interactor.swift */; };
+		11A31BD720476197000C515E /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A31BD620476197000C515E /* DismissAnimator.swift */; };
 		11CC9AB1203DC9BC00CE888E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AB0203DC9BC00CE888E /* AppDelegate.swift */; };
 		11CC9AB3203DC9BC00CE888E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AB2203DC9BC00CE888E /* FirstViewController.swift */; };
 		11CC9AB5203DC9BC00CE888E /* NewRuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AB4203DC9BC00CE888E /* NewRuleViewController.swift */; };
@@ -72,9 +81,18 @@
 		116654AD20430F6A00976B29 /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		116654AF2043137F00976B29 /* RulePart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulePart.swift; sourceTree = "<group>"; };
 		116654B12043162500976B29 /* LogicalOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicalOperator.swift; sourceTree = "<group>"; };
+		117CCBEC204807260051114E /* RuleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTableViewCell.swift; sourceTree = "<group>"; };
+		117CCBED204807260051114E /* RuleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuleTableViewCell.xib; sourceTree = "<group>"; };
+		117CCBF020480D540051114E /* MyRulesViewController+TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyRulesViewController+TableViewController.swift"; sourceTree = "<group>"; };
+		117CCBF220484EFB0051114E /* OrientationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationUtility.swift; sourceTree = "<group>"; };
+		117CCBF42048676E0051114E /* ImageView+BlurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+BlurEffect.swift"; sourceTree = "<group>"; };
 		1193B93E203EC5490026FF00 /* CategoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailViewController.swift; sourceTree = "<group>"; };
 		1193B940203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryDetailViewController+TableView.swift"; sourceTree = "<group>"; };
 		1193B942203EC9630026FF00 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		11A31BCE2046BF65000C515E /* Category+ExampleCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+ExampleCategories.swift"; sourceTree = "<group>"; };
+		11A31BD02046D5C6000C515E /* MyRulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRulesViewController.swift; sourceTree = "<group>"; };
+		11A31BD420476181000C515E /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		11A31BD620476197000C515E /* DismissAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissAnimator.swift; sourceTree = "<group>"; };
 		11CC9AAD203DC9BC00CE888E /* BA2_Peneder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BA2_Peneder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11CC9AB0203DC9BC00CE888E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11CC9AB2203DC9BC00CE888E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +161,8 @@
 				1193B940203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift */,
 				1153EA6720443EA100A5E038 /* CategoryItemViewController.swift */,
 				1153EA6920443EC300A5E038 /* CategoryItemViewController+TableViewController.swift */,
+				11A31BD02046D5C6000C515E /* MyRulesViewController.swift */,
+				117CCBF020480D540051114E /* MyRulesViewController+TableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -216,6 +236,8 @@
 				11E99EFF203EB6D500DCCDD1 /* CategoryItemTableViewCell.xib */,
 				116654A920430D8500976B29 /* NewRuleTableViewCell.swift */,
 				116654AA20430D8500976B29 /* NewRuleTableViewCell.xib */,
+				117CCBEC204807260051114E /* RuleTableViewCell.swift */,
+				117CCBED204807260051114E /* RuleTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -229,6 +251,8 @@
 				11CC9AFF203DE91A00CE888E /* UIView+Constraints.swift */,
 				11CC9B01203DFBF000CE888E /* UIImageView+RoundedCorners.swift */,
 				1193B942203EC9630026FF00 /* UITableView+Reusable.swift */,
+				117CCBF220484EFB0051114E /* OrientationUtility.swift */,
+				117CCBF42048676E0051114E /* ImageView+BlurEffect.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -236,6 +260,8 @@
 		11CC9AF4203DE42000CE888E /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				11A31BD420476181000C515E /* Interactor.swift */,
+				11A31BD620476197000C515E /* DismissAnimator.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -248,6 +274,7 @@
 				116654AD20430F6A00976B29 /* Rule.swift */,
 				116654AF2043137F00976B29 /* RulePart.swift */,
 				116654B12043162500976B29 /* LogicalOperator.swift */,
+				11A31BCE2046BF65000C515E /* Category+ExampleCategories.swift */,
 			);
 			path = Datamodel;
 			sourceTree = "<group>";
@@ -360,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11CC9ABD203DC9BC00CE888E /* LaunchScreen.storyboard in Resources */,
+				117CCBEF204807260051114E /* RuleTableViewCell.xib in Resources */,
 				11CC9AEE203DDD0600CE888E /* WeatherCollectionViewCell.xib in Resources */,
 				116654AC20430D8500976B29 /* NewRuleTableViewCell.xib in Resources */,
 				11CC9ABA203DC9BC00CE888E /* Assets.xcassets in Resources */,
@@ -398,9 +426,14 @@
 				11F241992040CF6C00DBDB34 /* Category.swift in Sources */,
 				116654B02043137F00976B29 /* RulePart.swift in Sources */,
 				11CC9AE5203DD9BB00CE888E /* BaseCategoryCell.swift in Sources */,
+				11A31BCF2046BF65000C515E /* Category+ExampleCategories.swift in Sources */,
 				11E99EFC203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.swift in Sources */,
 				1193B943203EC9630026FF00 /* UITableView+Reusable.swift in Sources */,
 				1193B941203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift in Sources */,
+				117CCBF120480D540051114E /* MyRulesViewController+TableViewController.swift in Sources */,
+				11A31BD520476181000C515E /* Interactor.swift in Sources */,
+				117CCBEE204807260051114E /* RuleTableViewCell.swift in Sources */,
+				117CCBF320484EFB0051114E /* OrientationUtility.swift in Sources */,
 				116654A72042FBD800976B29 /* NewRuleViewController+TableViewController.swift in Sources */,
 				11CC9AE3203DD60400CE888E /* CategoryListViewController+CollectionView.swift in Sources */,
 				11CC9B00203DE91A00CE888E /* UIView+Constraints.swift in Sources */,
@@ -408,15 +441,18 @@
 				11CC9AB5203DC9BC00CE888E /* NewRuleViewController.swift in Sources */,
 				116654B22043162500976B29 /* LogicalOperator.swift in Sources */,
 				11CC9AF1203DE35400CE888E /* Reusable.swift in Sources */,
+				11A31BD12046D5C6000C515E /* MyRulesViewController.swift in Sources */,
 				1153EA6A20443EC300A5E038 /* CategoryItemViewController+TableViewController.swift in Sources */,
 				1153EA6620441FD700A5E038 /* UIColorExtension.swift in Sources */,
 				11CC9AB1203DC9BC00CE888E /* AppDelegate.swift in Sources */,
 				11CC9AF3203DE37800CE888E /* UICollectionView+Reusable.swift in Sources */,
 				11CC9AB3203DC9BC00CE888E /* FirstViewController.swift in Sources */,
+				117CCBF52048676E0051114E /* ImageView+BlurEffect.swift in Sources */,
 				11CC9AFE203DE8EC00CE888E /* BaseView.swift in Sources */,
 				11E99F00203EB6D500DCCDD1 /* CategoryItemTableViewCell.swift in Sources */,
 				11F2419B2040D02900DBDB34 /* CategoryItem.swift in Sources */,
 				11CC9AED203DDD0600CE888E /* WeatherCollectionViewCell.swift in Sources */,
+				11A31BD720476197000C515E /* DismissAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

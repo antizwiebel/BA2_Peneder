@@ -32,15 +32,13 @@ extension CategoryItemViewController: UITableViewDelegate, UITableViewDataSource
                 tableView.register(UINib(nibName: "CategoryOverviewTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoryOverviewCell")
                 cell = tableView.dequeueReusableCell(withIdentifier: "CategoryOverviewCell") as! CategoryOverviewTableViewCell!
             }
-            cell?.separatorInset = UIEdgeInsets.zero
-            cell?.preservesSuperviewLayoutMargins = false
-            cell?.layoutMargins = UIEdgeInsets.zero
             cell?.selectionStyle = UITableViewCellSelectionStyle.none
-            cell?.titleLabel.text = self.categoryItem?.name ?? "N/A"
+            cell?.titleLabel.text = "Select value for " + (self.categoryItem?.name ?? "N/A")
             cell?.subTitleLabel.text = ""
             cell?.view.alpha = 0
             cell?.imageView?.image = self.categoryImage ?? UIImage (named: "Weather")
             cell?.imageView?.contentMode = UIViewContentMode.scaleAspectFill
+            
             return cell!
         }
         
@@ -66,7 +64,7 @@ extension CategoryItemViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 && indexPath.row == 0 {
-            return 150
+            return 120
         }
         
         return 100

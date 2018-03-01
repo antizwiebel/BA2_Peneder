@@ -16,10 +16,12 @@ class CategoryItemViewController: UIViewController {
     var categoryImage: UIImage?
     var selectedRulepart: RulePart?
     var selectedRulePartIndex: Int?
+    var interactor:Interactor? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configure(tableView: tableView)
+        tableView.panGestureRecognizer.addTarget(self, action: Selector("handleGesture:"))
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,6 +32,47 @@ class CategoryItemViewController: UIViewController {
 
     @IBAction func closeButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func handleGesture(_ sender: UIPanGestureRecognizer) {
+        let percentThreshold:CGFloat = 0.3
+        
+        // convert y-position to downward pull progress (percentage)
+        let translation = sender.translation(in: view)
+        let verticalMovement = translation.y / view.bounds.height
+        let downwardMovement = fmaxf(Float(verticalMovement), 0.0)
+        let downwardMovementPercent = fminf(downwardMovement, 1.0)
+        let progress = CGFloat(downwardMovementPercent)
+        
+        guard let interactor = interactor else { return }
+        
+        switch sender.state {
+        case .began:
+            interactor.hasStarted = true
+            dismiss(animated: true, completion: nil)
+        case .changed:
+            interactor.shouldFinish = progress > percentThreshold
+            interactor.update(progress)
+        case .cancelled:
+            interactor.hasStarted = false
+            interactor.cancel()
+        case .ended:
+            interactor.hasStarted = false
+            interactor.shouldFinish
+                ? interactor.finish()
+                : interactor.cancel()
+        default:
+            break
+        }
+    }
+    
+    // Refactoring the progress calculation.
+    // In the case of dragging downward, pulling down 50, and the screen height is 500, results in 0.10
+    func progressAlongAxis(pointOnAxis: CGFloat, axisLength: CGFloat) -> CGFloat {
+        let movementOnAxis = pointOnAxis / axisLength
+        let positiveMovementOnAxis = fmaxf(Float(movementOnAxis), 0.0)
+        let positiveMovementOnAxisPercent = fminf(positiveMovementOnAxis, 1.0)
+        return CGFloat(positiveMovementOnAxisPercent)
     }
     
     // MARK: - Navigation
@@ -53,6 +96,7 @@ class CategoryItemViewController: UIViewController {
             //update consequent?
             } else  if selectedRulePartIndex ?? 0 == -2 {
                 destinationViewController.rule?.consequent = selectedRulepart
+                destinationViewController.rule?.ruleImage = categoryImage ?? UIImage(named: "Running")
             }
             destinationViewController.tableView.reloadData()
         }
