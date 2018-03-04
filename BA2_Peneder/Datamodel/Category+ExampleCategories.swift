@@ -38,7 +38,7 @@ extension Category {
          let sampleCategoryItem5 = CategoryItem(name: "skiing", fuzzyValues: ["excellent", "good",  "average", "bad", "poor"])
         let sampleCategoryItems = [sampleCategoryItem, sampleCategoryItem2, sampleCategoryItem3, sampleCategoryItem4, sampleCategoryItem5]
         
-        categories.append(Category(categoryTitle: "Running", categorySubTitle: "Everything about outdoor sports", categoryItems: sampleCategoryItems, image: UIImage(named: "Running")!))
+        categories.append(Category(categoryTitle: "Outdoor Sports", categorySubTitle: "Everything about outdoor sports", categoryItems: sampleCategoryItems, image: UIImage(named: "Running")!))
         
         
         return categories

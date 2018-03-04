@@ -35,14 +35,16 @@ class Rule: CustomStringConvertible {
     internal func buildRuleString() -> String {
         var ruleString = "EMPTY"
         if self.consequent != nil {
-            ruleString = String(describing: self.consequent!)
+            ruleString = String(describing: self.consequent!) + ",C"
         }
         if self.antecedents?.count ?? 0 > 0 {
             let antecedentCount = self.antecedents?.count ?? 1
             for index in 0...(antecedentCount-1) {
                 ruleString = ruleString + "\n" + String(describing: self.antecedents![index])
                 if (index != antecedentCount-1) {
-                    ruleString = ruleString + "\n" + String(describing: self.logicalOperators![index+1])
+                    ruleString = ruleString + "," + String(describing: self.logicalOperators![index+1])
+                } else {
+                    ruleString = ruleString + ",END"
                 }
             }
         }

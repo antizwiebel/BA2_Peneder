@@ -26,6 +26,6 @@ class RulePart: CustomStringConvertible {
         self.hedge = ""
     }
     
-    var description: String { return variable + ";" + hedge + ";" + fuzzyValue }
+    var description: String { return variable + "," + hedge + "," + fuzzyValue }
 
 }

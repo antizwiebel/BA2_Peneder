@@ -84,7 +84,7 @@ extension MyRulesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
         let cell = tableView.cellForRow(at: indexPath) as? RuleTableViewCell
-        
+    
         self.selectedRuleIndex = indexPath.row
         cell?.setSelected(false, animated: true)
         

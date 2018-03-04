@@ -23,20 +23,22 @@ class NewRuleViewController: UIViewController {
         AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
         
         configure(tableView: tableView)
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        canCreateRule()
+    }
+    
+    ///checks if the current rule has at least one antecedent and consequent and, if yes, enables the create button
+    func canCreateRule() {
         if self.rule?.antecedents?.count ?? 0 > 0 && self.rule?.consequent != nil {
             self.createRuleButton.isEnabled = true
             self.createRuleButton.backgroundColor = UIColor.myBlue
         } else {
             self.createRuleButton.isEnabled = false
-            
+            self.createRuleButton.backgroundColor = UIColor.gray
         }
     }
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -44,7 +46,6 @@ class NewRuleViewController: UIViewController {
     }
 
     @IBAction func unwindToNewRule(segue:UIStoryboardSegue) { }
-
     
     @IBAction func onCreateButtonTouched(_ sender: Any) {
         print(self.rule!)
@@ -56,14 +57,16 @@ class NewRuleViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
         switch segue.identifier! {
         case "selectRulePart":
+            // Pass the selected RulePart to the CategoryListViewController.
             let destinationViewController = segue.destination as! CategoryListViewController
             if self.selectedRulePartIndex != nil {
                 destinationViewController.selectedRulePartIndex = selectedRulePartIndex
             }
         case "unwindToMyRules":
+            // Unwind back to the MyRulesViewController with the newly created or updated rule
             let destinationViewController = segue.destination as! MyRulesViewController
             if self.rule != nil {
                 //update existing rule?

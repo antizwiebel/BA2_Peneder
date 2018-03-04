@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -265,11 +266,18 @@
                                 <action selector="editButtonTapped:" destination="hVj-L2-nWG" id="3qm-gs-HUj"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HKw-tP-P8C">
-                            <connections>
-                                <action selector="newRuleButtonTapped:" destination="hVj-L2-nWG" id="ddJ-wa-wYR"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="HKw-tP-P8C">
+                                <connections>
+                                    <action selector="newRuleButtonTapped:" destination="hVj-L2-nWG" id="ddJ-wa-wYR"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="rAb-xR-ioZ">
+                                <connections>
+                                    <action selector="exportButtonTapped:" destination="hVj-L2-nWG" id="0ZR-bW-RDA"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <connections>

@@ -13,17 +13,9 @@ extension CategoryListViewController: UICollectionViewDataSource, UICollectionVi
 
     
     internal func configure(collectionView: UICollectionView) {
-        
-        //TODO: include cells again
+        //register cells
         collectionView.registerReusableCell(WeatherCollectionViewCell.self)
-
-        /**
-        collectionView.registerReusableCell(WorldPremiereCell.self)
-        collectionView.registerReusableCell(FromTheEditorsCell.self)
-        collectionView.registerReusableCell(AppOfTheDayCell.self)
-        collectionView.registerReusableCell(GetStartedListCell.self)
-        */
-        
+        //configure collection view
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
