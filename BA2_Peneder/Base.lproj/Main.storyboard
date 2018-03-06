@@ -224,6 +224,7 @@
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="rFa-D4-MDI"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -231,6 +232,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="hVj-L2-nWG" kind="relationship" relationship="viewControllers" id="vcN-Ph-20G"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="STa-HK-SKa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -388,12 +390,13 @@
         <scene sceneID="HGC-iY-REh">
             <objects>
                 <navigationController id="BqO-v1-dHt" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vox-Gt-kHQ">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="hVj-L2-nWG" kind="relationship" relationship="rootViewController" id="RLF-2g-aSh"/>
+                        <segue destination="49e-Tb-3d3" kind="relationship" relationship="rootViewController" id="fRq-eh-hIs"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ikz-6E-TLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -407,6 +410,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vcN-Ph-20G"/>
+        <segue reference="w16-B8-Iqq"/>
     </inferredMetricsTieBreakers>
 </document>

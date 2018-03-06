@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 extension Category {
+    
+    ///Used to retrieve fully defined example categories to showcase the functionality of the app and for testing purposes
+    /// - Returns: a set of three categories plus items for testing
     static func getExampleCategories() -> [Category] {
         var categories = [Category]()
         

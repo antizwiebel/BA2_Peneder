@@ -21,7 +21,6 @@ class MyRulesViewController: UIViewController, MFMailComposeViewControllerDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         configure(tableView: tableView)
-        //self.rules = getExampleRules()
         readFromCSVFile()
     }
 
@@ -49,23 +48,11 @@ class MyRulesViewController: UIViewController, MFMailComposeViewControllerDelega
     
     @IBAction func exportButtonTapped(_ sender: Any) {
         let fileName = "myRules.csv"
-        let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(fileName)
-        
-        var csvText = ""
-        let count = rules?.count ?? 0
-        
-        if count > 0 {
-            
-            for rule in self.rules! {
+        if let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            let fileURL = path.appendingPathComponent(fileName)
+            if rules?.count ?? 0 > 0 {
                 
-                let newLine = String(describing: rule)
-                csvText.append(newLine)
-            }
-            
-            do {
-                try csvText.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
-                
-                let vc = UIActivityViewController(activityItems: [path], applicationActivities: [])
+                let vc = UIActivityViewController(activityItems: [fileURL], applicationActivities: [])
                 //exclude certain activities that are not suited for exporting csv files
                 vc.excludedActivityTypes = [
                     UIActivityType.assignToContact,
@@ -78,14 +65,9 @@ class MyRulesViewController: UIViewController, MFMailComposeViewControllerDelega
                 ]
                 vc.setValue("My created rules", forKey: "Subject")
                 present(vc, animated: true, completion: nil)
-            } catch {
-                
-                print("Failed to create file")
-                print("\(error)")
+            } else {
+                showErrorAlert("Error", msg: "There is no data to export")
             }
-            
-        } else {
-            showErrorAlert("Error", msg: "There is no data to export")
         }
     }
     
@@ -107,8 +89,8 @@ class MyRulesViewController: UIViewController, MFMailComposeViewControllerDelega
 
         let antecedents = [antecedent1, antecedent2, antecedent2, antecedent2, antecedent2]
         
-        rules.append(Rule(antecedents: antecedents, consequent: RulePart(variable: "running", hedge: "", fuzzyValue: "poor"), title: "", logicalOperators: [LogicalOperator.AND, LogicalOperator.OR, LogicalOperator.OR,LogicalOperator.OR,LogicalOperator.OR,]))
-        rules.append(Rule(antecedents: antecedents, consequent: RulePart(variable: "cycling", hedge: "", fuzzyValue: "poor"), title: "", logicalOperators: [LogicalOperator.AND, LogicalOperator.OR, LogicalOperator.OR,LogicalOperator.OR,LogicalOperator.OR,]))
+        rules.append(Rule(antecedents: antecedents, consequent: RulePart(variable: "running", hedge: "", fuzzyValue: "poor"), logicalOperators: [LogicalOperator.AND, LogicalOperator.OR, LogicalOperator.OR,LogicalOperator.OR,LogicalOperator.OR,]))
+        rules.append(Rule(antecedents: antecedents, consequent: RulePart(variable: "cycling", hedge: "", fuzzyValue: "poor"), logicalOperators: [LogicalOperator.AND, LogicalOperator.OR, LogicalOperator.OR,LogicalOperator.OR,LogicalOperator.OR,]))
         
         return rules
     }
@@ -118,22 +100,20 @@ class MyRulesViewController: UIViewController, MFMailComposeViewControllerDelega
         if let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             let fileURL = path.appendingPathComponent(fileName)
             var csvText = ""
+            //count the number of rules
+            let ruleCount = rules?.count ?? 0
             
-            let count = rules?.count ?? 0
-            
-            if count > 0 {
-                csvText.append("variable,hedge,fuzzyValue,operator")
-                csvText.append("\n")
-
-                for index in 0...self.rules!.count-1 {
-                    
+            if ruleCount > 0 {
+                //add header row
+                csvText.append("variable,hedge,fuzzyValue,operator\n")
+                
+                for index in 0...ruleCount-1 {
                     let newLine = String(describing: self.rules![index])
                     csvText.append(newLine)
-                    if index != self.rules!.count-1 {
+                    if index != ruleCount-1 {
                         csvText.append("\n")
                     }
                 }
-                
                 do {
                     print(csvText)
                     try csvText.write(to: fileURL, atomically: true, encoding: .utf8)

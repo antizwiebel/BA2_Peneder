@@ -8,6 +8,11 @@
 
 import Foundation
 
+/**
+ A operator that links two rules with either a logical AND or OR.
+ - OR:  a disjunction between rules.
+ - AND: a conjunction between rules.
+ */
 public enum LogicalOperator {
     case AND
     case OR
