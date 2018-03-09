@@ -47,7 +47,7 @@ extension CategoryItemViewController: UITableViewDelegate, UITableViewDataSource
             tableView.register(UINib(nibName: "CategoryItemTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoryItemCell")
             cell = tableView.dequeueReusableCell(withIdentifier: "CategoryItemCell") as! CategoryItemTableViewCell!
         }
-        cell?.label.text = categoryItem?.fuzzyValues[indexPath.row-1] ?? "N/A"
+        cell?.label.text = categoryItem?.fuzzyValues[indexPath.row-1].title ?? "N/A"
         
         return cell!
     }
@@ -57,7 +57,7 @@ extension CategoryItemViewController: UITableViewDelegate, UITableViewDataSource
             //create selected rulepart and send to NewRule view
             let selectedFuzzyValue = self.categoryItem?.fuzzyValues[indexPath.row-1]
             //TODO: include possibility to select hedge?
-            self.selectedRulepart = RulePart (variable: categoryItem?.name ?? "N/A", hedge: "", fuzzyValue: selectedFuzzyValue ?? "N/A")
+            self.selectedRulepart = RulePart (variable: categoryItem?.name ?? "N/A", hedge: "", fuzzyValue: selectedFuzzyValue ?? FuzzyValue(title: "N/A"))
             performSegue(withIdentifier: "unwindToNewRule", sender: self)
         }
     }

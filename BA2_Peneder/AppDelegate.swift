@@ -16,6 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FuzzyValue.saveFuzzyValues()
+        let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+        //check for first launch
+        if launchedBefore  {
+            print("Not first launch.")
+        } else {
+            print("First launch, setting UserDefault.")
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+            //if first launch, save all crisp values for CategoryItems with default value
+            Category.saveDefaultCrispValuesForItems()
+        }
         return true
     }
 

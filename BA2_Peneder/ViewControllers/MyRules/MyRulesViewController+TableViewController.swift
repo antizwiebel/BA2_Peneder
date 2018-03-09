@@ -32,19 +32,31 @@ extension MyRulesViewController: UITableViewDelegate, UITableViewDataSource {
             cell = tableView.dequeueReusableCell(withIdentifier: "RuleTableViewCell") as! RuleTableViewCell!
         }
         if let rule = rules?[indexPath.row]{
-            cell?.consequentLabel.text = rule.consequent!.variable + " is " + rule.consequent!.fuzzyValue
-            cell?.categoryImage.image = rule.ruleImage ?? UIImage (named: "Running")
+            cell?.consequentLabel.text = rule.consequent!.variable + " is " + rule.consequent!.fuzzyValue.title
+            cell?.categoryImage.image = getImageForConsequentCategory(rule: rule) ?? UIImage (named: "Running")
             cell?.antecedentsLabel.text = fillAntecedentLabel(rule: rule)
         }
         return cell!
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
+        if editingStyle ==  .delete {
             rules?.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .fade)
-            self.tableView.reloadData()
         }
+    }
+    
+    func getImageForConsequentCategory (rule: Rule) -> UIImage? {
+        let itemIndex = self.exampleCategories.index(where: { (item: Category) -> Bool in
+            var found = false
+            for categoryItem in item.categoryItems {
+                if categoryItem.name == rule.consequent?.variable {
+                    found = true
+                }
+            }
+            return found
+        })
+        return exampleCategories[itemIndex ?? 0].image
     }
     
     func fillAntecedentLabel(rule: Rule) -> String {
@@ -54,9 +66,9 @@ extension MyRulesViewController: UITableViewDelegate, UITableViewDataSource {
             
             for index in 0...(antecedentCount-1) {
                 if (index == 0) {
-                    antecedentString = antecedentString + rule.antecedents![index].variable + " is " + rule.antecedents![index].fuzzyValue
+                    antecedentString = antecedentString + rule.antecedents![index].variable + " is " + rule.antecedents![index].fuzzyValue.title
                 } else {
-                    antecedentString = antecedentString + "\n" + rule.antecedents![index].variable + " is " + rule.antecedents![index].fuzzyValue
+                    antecedentString = antecedentString + "\n" + rule.antecedents![index].variable + " is " + rule.antecedents![index].fuzzyValue.title
                 }
                 if (index != antecedentCount-1) {
                     antecedentString = antecedentString + "\n" + String(describing: rule.logicalOperators![index+1])

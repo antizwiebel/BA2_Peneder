@@ -11,7 +11,7 @@ import UIKit
 /**
  Represents a rule which contains one or more antecedents, which are chained together with ANDs and ORs, one consequent and an associated image
  */
-class Rule: CustomStringConvertible {
+public class Rule: CustomStringConvertible {
     
     /// the antecedents of a rule, i.e. the "IF-part"
     public var antecedents: [RulePart]?
@@ -21,7 +21,8 @@ class Rule: CustomStringConvertible {
     public var logicalOperators: [LogicalOperator]?
     /// The associated image to a rule, used as a background in the MyRules View
     public var ruleImage: UIImage?
-    
+    /// The degree of support for a rule's consequent, calculated by using defuzzification
+    public var degreeOfSupport: Double?
     /// Initializes a new rule with a given array of antecedents, their associated operators and a consequent
     init(antecedents: [RulePart], consequent: RulePart, logicalOperators: [LogicalOperator]) {
         self.antecedents = antecedents
@@ -36,7 +37,7 @@ class Rule: CustomStringConvertible {
     }
     
     ///the string-representation of a rule that is later used to save it in a file
-    var description: String { return buildRuleString() }
+    public var description: String { return buildRuleString() }
 
     /// Get the representation of a rule as a string
     /// - Return: the string-representation of a rule that is later used to save it in a file

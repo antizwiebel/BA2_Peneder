@@ -65,7 +65,7 @@ extension NewRuleViewController: UITableViewDelegate, UITableViewDataSource {
         } else if (numberOfAntecedents == 0 && indexPath.row == 3 && self.rule?.consequent != nil) || (indexPath.row == (2 + 2*numberOfAntecedents)) {
             cell?.label.textColor = UIColor.myBlue
             let rulepart = self.rule?.consequent ?? RulePart(variable: "A")
-            cell?.label.text = rulepart.variable + " is " + rulepart.hedge + " " + rulepart.fuzzyValue
+            cell?.label.text = rulepart.variable + " is " + rulepart.hedge + " " + rulepart.fuzzyValue.title
         //insert a "+" to indicate that a user can insert more antecedents
         } else if indexPath.row == (2*numberOfAntecedents) {
             cell?.label.textColor = UIColor.myBlue
@@ -81,7 +81,7 @@ extension NewRuleViewController: UITableViewDelegate, UITableViewDataSource {
             cell?.label.textColor = UIColor.myBlue
             let index = indexPath.row/2
             let rulepart = self.rule?.antecedents?[index] ?? RulePart(variable: "A")
-            cell?.label.text = rulepart.variable + " is " + rulepart.hedge + " " + rulepart.fuzzyValue
+            cell?.label.text = rulepart.variable + " is " + rulepart.hedge + " " + rulepart.fuzzyValue.title
         }
         return cell!
     }
@@ -136,7 +136,6 @@ extension NewRuleViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             //get the indexCode for the selected row and perform segue
             selectedRulePartIndex = getIndexCodeForSelectedCell (index: indexPath.row)
-            print(selectedRulePartIndex)
             performSegue(withIdentifier: "selectRulePart", sender: self)
         }
         self.tableView.reloadData()

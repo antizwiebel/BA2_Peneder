@@ -16,6 +16,19 @@
 		116654AE20430F6A00976B29 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116654AD20430F6A00976B29 /* Rule.swift */; };
 		116654B02043137F00976B29 /* RulePart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116654AF2043137F00976B29 /* RulePart.swift */; };
 		116654B22043162500976B29 /* LogicalOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116654B12043162500976B29 /* LogicalOperator.swift */; };
+		117B8AC9204FD041008A6F49 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8AC8204FD041008A6F49 /* SettingsTableViewController.swift */; };
+		117B8ACD204FE4BA008A6F49 /* PreferredCategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8ACC204FE4BA008A6F49 /* PreferredCategoriesTableViewController.swift */; };
+		117B8ACF20518CCA008A6F49 /* MembershipCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8ACE20518CCA008A6F49 /* MembershipCalculator.swift */; };
+		117B8AD120519B7D008A6F49 /* RuleEvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8AD020519B7D008A6F49 /* RuleEvaluationViewController.swift */; };
+		117B8ADA20519D26008A6F49 /* FuzzyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8AD920519D26008A6F49 /* FuzzyValue.swift */; };
+		117B8ADC2051B797008A6F49 /* FuzzyValue+ExampleFuzzyValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8ADB2051B797008A6F49 /* FuzzyValue+ExampleFuzzyValues.swift */; };
+		117B8ADF2051DF89008A6F49 /* EvaluatedRuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8ADD2051DF89008A6F49 /* EvaluatedRuleTableViewCell.swift */; };
+		117B8AE02051DF89008A6F49 /* EvaluatedRuleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117B8ADE2051DF89008A6F49 /* EvaluatedRuleTableViewCell.xib */; };
+		117B8AE22051E31A008A6F49 /* RuleEvaluationViewController+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8AE12051E31A008A6F49 /* RuleEvaluationViewController+TableView.swift */; };
+		117B8AE42051E80A008A6F49 /* UIViewController+ReadSaveRulesCSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8AE32051E80A008A6F49 /* UIViewController+ReadSaveRulesCSV.swift */; };
+		117B8AE620528F7E008A6F49 /* CrispValuesForCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8AE520528F7E008A6F49 /* CrispValuesForCategoriesViewController.swift */; };
+		117B8AE82052974C008A6F49 /* CrispValueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8AE72052974C008A6F49 /* CrispValueCell.swift */; };
+		117B8AEA2052A14F008A6F49 /* String+FloatValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8AE92052A14F008A6F49 /* String+FloatValue.swift */; };
 		117CCBEE204807260051114E /* RuleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117CCBEC204807260051114E /* RuleTableViewCell.swift */; };
 		117CCBEF204807260051114E /* RuleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117CCBED204807260051114E /* RuleTableViewCell.xib */; };
 		117CCBF120480D540051114E /* MyRulesViewController+TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117CCBF020480D540051114E /* MyRulesViewController+TableViewController.swift */; };
@@ -84,6 +97,19 @@
 		116654AD20430F6A00976B29 /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		116654AF2043137F00976B29 /* RulePart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulePart.swift; sourceTree = "<group>"; };
 		116654B12043162500976B29 /* LogicalOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicalOperator.swift; sourceTree = "<group>"; };
+		117B8AC8204FD041008A6F49 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		117B8ACC204FE4BA008A6F49 /* PreferredCategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferredCategoriesTableViewController.swift; sourceTree = "<group>"; };
+		117B8ACE20518CCA008A6F49 /* MembershipCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipCalculator.swift; sourceTree = "<group>"; };
+		117B8AD020519B7D008A6F49 /* RuleEvaluationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEvaluationViewController.swift; sourceTree = "<group>"; };
+		117B8AD920519D26008A6F49 /* FuzzyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzyValue.swift; sourceTree = "<group>"; };
+		117B8ADB2051B797008A6F49 /* FuzzyValue+ExampleFuzzyValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FuzzyValue+ExampleFuzzyValues.swift"; sourceTree = "<group>"; };
+		117B8ADD2051DF89008A6F49 /* EvaluatedRuleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvaluatedRuleTableViewCell.swift; sourceTree = "<group>"; };
+		117B8ADE2051DF89008A6F49 /* EvaluatedRuleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EvaluatedRuleTableViewCell.xib; sourceTree = "<group>"; };
+		117B8AE12051E31A008A6F49 /* RuleEvaluationViewController+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RuleEvaluationViewController+TableView.swift"; sourceTree = "<group>"; };
+		117B8AE32051E80A008A6F49 /* UIViewController+ReadSaveRulesCSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ReadSaveRulesCSV.swift"; sourceTree = "<group>"; };
+		117B8AE520528F7E008A6F49 /* CrispValuesForCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrispValuesForCategoriesViewController.swift; sourceTree = "<group>"; };
+		117B8AE72052974C008A6F49 /* CrispValueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrispValueCell.swift; sourceTree = "<group>"; };
+		117B8AE92052A14F008A6F49 /* String+FloatValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+FloatValue.swift"; sourceTree = "<group>"; };
 		117CCBEC204807260051114E /* RuleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleTableViewCell.swift; sourceTree = "<group>"; };
 		117CCBED204807260051114E /* RuleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuleTableViewCell.xib; sourceTree = "<group>"; };
 		117CCBF020480D540051114E /* MyRulesViewController+TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MyRulesViewController+TableViewController.swift"; sourceTree = "<group>"; };
@@ -168,18 +194,79 @@
 		116654A82042FBE500976B29 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				117B8AD220519B85008A6F49 /* NewRule */,
+				117B8AD320519B93008A6F49 /* CategoryList */,
+				117B8AD420519B9F008A6F49 /* CategoryDetail */,
+				117B8AD520519BAA008A6F49 /* CategoryItem */,
+				117B8AD620519BB4008A6F49 /* MyRules */,
+				117B8AD720519BC2008A6F49 /* Settings */,
+				117B8AD820519BCE008A6F49 /* RuleEvaluation */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		117B8AD220519B85008A6F49 /* NewRule */ = {
+			isa = PBXGroup;
+			children = (
 				11CC9AB4203DC9BC00CE888E /* NewRuleViewController.swift */,
 				116654A62042FBD800976B29 /* NewRuleViewController+TableViewController.swift */,
+			);
+			path = NewRule;
+			sourceTree = "<group>";
+		};
+		117B8AD320519B93008A6F49 /* CategoryList */ = {
+			isa = PBXGroup;
+			children = (
 				11CC9AE0203DD57200CE888E /* CategoryListViewController.swift */,
 				11CC9AE2203DD60400CE888E /* CategoryListViewController+CollectionView.swift */,
+			);
+			path = CategoryList;
+			sourceTree = "<group>";
+		};
+		117B8AD420519B9F008A6F49 /* CategoryDetail */ = {
+			isa = PBXGroup;
+			children = (
 				1193B93E203EC5490026FF00 /* CategoryDetailViewController.swift */,
 				1193B940203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift */,
+			);
+			path = CategoryDetail;
+			sourceTree = "<group>";
+		};
+		117B8AD520519BAA008A6F49 /* CategoryItem */ = {
+			isa = PBXGroup;
+			children = (
 				1153EA6720443EA100A5E038 /* CategoryItemViewController.swift */,
 				1153EA6920443EC300A5E038 /* CategoryItemViewController+TableViewController.swift */,
+			);
+			path = CategoryItem;
+			sourceTree = "<group>";
+		};
+		117B8AD620519BB4008A6F49 /* MyRules */ = {
+			isa = PBXGroup;
+			children = (
 				11A31BD02046D5C6000C515E /* MyRulesViewController.swift */,
 				117CCBF020480D540051114E /* MyRulesViewController+TableViewController.swift */,
 			);
-			path = ViewControllers;
+			path = MyRules;
+			sourceTree = "<group>";
+		};
+		117B8AD720519BC2008A6F49 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				117B8ACC204FE4BA008A6F49 /* PreferredCategoriesTableViewController.swift */,
+				117B8AC8204FD041008A6F49 /* SettingsTableViewController.swift */,
+				117B8AE520528F7E008A6F49 /* CrispValuesForCategoriesViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		117B8AD820519BCE008A6F49 /* RuleEvaluation */ = {
+			isa = PBXGroup;
+			children = (
+				117B8AD020519B7D008A6F49 /* RuleEvaluationViewController.swift */,
+				117B8AE12051E31A008A6F49 /* RuleEvaluationViewController+TableView.swift */,
+			);
+			path = RuleEvaluation;
 			sourceTree = "<group>";
 		};
 		11CC9AA4203DC9BC00CE888E = {
@@ -255,6 +342,9 @@
 				116654AA20430D8500976B29 /* NewRuleTableViewCell.xib */,
 				117CCBEC204807260051114E /* RuleTableViewCell.swift */,
 				117CCBED204807260051114E /* RuleTableViewCell.xib */,
+				117B8ADD2051DF89008A6F49 /* EvaluatedRuleTableViewCell.swift */,
+				117B8ADE2051DF89008A6F49 /* EvaluatedRuleTableViewCell.xib */,
+				117B8AE72052974C008A6F49 /* CrispValueCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -270,6 +360,9 @@
 				1193B942203EC9630026FF00 /* UITableView+Reusable.swift */,
 				117CCBF220484EFB0051114E /* OrientationUtility.swift */,
 				117CCBF42048676E0051114E /* ImageView+BlurEffect.swift */,
+				117B8ACE20518CCA008A6F49 /* MembershipCalculator.swift */,
+				117B8AE32051E80A008A6F49 /* UIViewController+ReadSaveRulesCSV.swift */,
+				117B8AE92052A14F008A6F49 /* String+FloatValue.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -292,6 +385,8 @@
 				116654AF2043137F00976B29 /* RulePart.swift */,
 				116654B12043162500976B29 /* LogicalOperator.swift */,
 				11A31BCE2046BF65000C515E /* Category+ExampleCategories.swift */,
+				117B8AD920519D26008A6F49 /* FuzzyValue.swift */,
+				117B8ADB2051B797008A6F49 /* FuzzyValue+ExampleFuzzyValues.swift */,
 			);
 			path = Datamodel;
 			sourceTree = "<group>";
@@ -437,6 +532,7 @@
 			files = (
 				11CC9ABD203DC9BC00CE888E /* LaunchScreen.storyboard in Resources */,
 				117CCBEF204807260051114E /* RuleTableViewCell.xib in Resources */,
+				117B8AE02051DF89008A6F49 /* EvaluatedRuleTableViewCell.xib in Resources */,
 				11CC9AEE203DDD0600CE888E /* WeatherCollectionViewCell.xib in Resources */,
 				116654AC20430D8500976B29 /* NewRuleTableViewCell.xib in Resources */,
 				11CC9ABA203DC9BC00CE888E /* Assets.xcassets in Resources */,
@@ -534,10 +630,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BA2_Peneder/Pods-BA2_Peneder-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CSV.swift/CSV.framework",
+				"${BUILT_PRODUCTS_DIR}/CollapsibleTableSectionViewController/CollapsibleTableSectionViewController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSV.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollapsibleTableSectionViewController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -617,6 +715,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117B8ADA20519D26008A6F49 /* FuzzyValue.swift in Sources */,
 				116654AB20430D8500976B29 /* NewRuleTableViewCell.swift in Sources */,
 				11CC9B02203DFBF000CE888E /* UIImageView+RoundedCorners.swift in Sources */,
 				1193B93F203EC5490026FF00 /* CategoryDetailViewController.swift in Sources */,
@@ -626,11 +725,16 @@
 				116654B02043137F00976B29 /* RulePart.swift in Sources */,
 				11CC9AE5203DD9BB00CE888E /* BaseCategoryCell.swift in Sources */,
 				11A31BCF2046BF65000C515E /* Category+ExampleCategories.swift in Sources */,
+				117B8AE620528F7E008A6F49 /* CrispValuesForCategoriesViewController.swift in Sources */,
 				11E99EFC203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.swift in Sources */,
+				117B8AEA2052A14F008A6F49 /* String+FloatValue.swift in Sources */,
 				1193B943203EC9630026FF00 /* UITableView+Reusable.swift in Sources */,
 				1193B941203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift in Sources */,
 				117CCBF120480D540051114E /* MyRulesViewController+TableViewController.swift in Sources */,
+				117B8AE82052974C008A6F49 /* CrispValueCell.swift in Sources */,
 				11A31BD520476181000C515E /* Interactor.swift in Sources */,
+				117B8ADC2051B797008A6F49 /* FuzzyValue+ExampleFuzzyValues.swift in Sources */,
+				117B8ADF2051DF89008A6F49 /* EvaluatedRuleTableViewCell.swift in Sources */,
 				117CCBEE204807260051114E /* RuleTableViewCell.swift in Sources */,
 				117CCBF320484EFB0051114E /* OrientationUtility.swift in Sources */,
 				116654A72042FBD800976B29 /* NewRuleViewController+TableViewController.swift in Sources */,
@@ -638,6 +742,7 @@
 				11CC9B00203DE91A00CE888E /* UIView+Constraints.swift in Sources */,
 				11CC9AE1203DD57200CE888E /* CategoryListViewController.swift in Sources */,
 				11CC9AB5203DC9BC00CE888E /* NewRuleViewController.swift in Sources */,
+				117B8ACF20518CCA008A6F49 /* MembershipCalculator.swift in Sources */,
 				116654B22043162500976B29 /* LogicalOperator.swift in Sources */,
 				11CC9AF1203DE35400CE888E /* Reusable.swift in Sources */,
 				11A31BD12046D5C6000C515E /* MyRulesViewController.swift in Sources */,
@@ -646,12 +751,17 @@
 				11CC9AB1203DC9BC00CE888E /* AppDelegate.swift in Sources */,
 				11CC9AF3203DE37800CE888E /* UICollectionView+Reusable.swift in Sources */,
 				11CC9AB3203DC9BC00CE888E /* FirstViewController.swift in Sources */,
+				117B8AE22051E31A008A6F49 /* RuleEvaluationViewController+TableView.swift in Sources */,
 				117CCBF52048676E0051114E /* ImageView+BlurEffect.swift in Sources */,
 				11CC9AFE203DE8EC00CE888E /* BaseView.swift in Sources */,
 				11E99F00203EB6D500DCCDD1 /* CategoryItemTableViewCell.swift in Sources */,
 				11F2419B2040D02900DBDB34 /* CategoryItem.swift in Sources */,
 				11CC9AED203DDD0600CE888E /* WeatherCollectionViewCell.swift in Sources */,
 				11A31BD720476197000C515E /* DismissAnimator.swift in Sources */,
+				117B8AE42051E80A008A6F49 /* UIViewController+ReadSaveRulesCSV.swift in Sources */,
+				117B8ACD204FE4BA008A6F49 /* PreferredCategoriesTableViewController.swift in Sources */,
+				117B8AD120519B7D008A6F49 /* RuleEvaluationViewController.swift in Sources */,
+				117B8AC9204FD041008A6F49 /* SettingsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
