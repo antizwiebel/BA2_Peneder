@@ -35,7 +35,7 @@ extension RuleEvaluationViewController: UITableViewDelegate, UITableViewDataSour
             cell?.consequentLabel.text = rule.consequent!.variable + " is " + rule.consequent!.fuzzyValue.title
             cell?.antecedentsLabel.text = fillAntecedentLabel(rule: rule)
             cell?.membershipsLabel.text = fillMembershipsLabel(rule: rule)
-            cell?.degreeOfSupportLabel.text = "support: " + String(format: "%.2f", round(100 * rules![indexPath.row].degreeOfSupport!) / 100)
+            cell?.degreeOfSupportLabel.text = "truth: " + String(format: "%.2f", round(100 * rules![indexPath.row].degreeOfSupport!) / 100)
         }
         cell?.selectionStyle = .none
         return cell!

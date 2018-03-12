@@ -68,6 +68,7 @@ class CategoryDetailViewController: UIViewController {
         return CGFloat(positiveMovementOnAxisPercent)
     }
     
+    /// shows a small circle to hint at the user that they can "swipe down to dismiss the view"
     func showHelperCircle(){
         let center = CGPoint(x: view.bounds.width * 0.5, y: 100)
         let small = CGSize(width: 30, height: 30)

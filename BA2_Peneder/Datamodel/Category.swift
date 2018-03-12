@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 /// A category contains further items that are used to browse through possible variables and fuzzy values that can be used to construct a rule. Features a title, subtitle and a striking image to explain the purpose and its content to the user
-public class Category {
+public class Category: NSObject {
     
     /// The title of the category
     public var title: String = "Test"

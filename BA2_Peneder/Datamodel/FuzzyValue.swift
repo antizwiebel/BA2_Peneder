@@ -7,7 +7,8 @@
 //
 
 import Foundation
-/// represents either an antecedent or a precedent in a rule
+
+/// represents a fuzzy value and its triangular-shaped membership function
 public class FuzzyValue: CustomStringConvertible {
     
     /// the variable or object that is assigned a hedge and a fuzzy value

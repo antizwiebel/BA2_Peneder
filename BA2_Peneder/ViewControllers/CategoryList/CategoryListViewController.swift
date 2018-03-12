@@ -14,11 +14,13 @@ class CategoryListViewController: UIViewController {
     var categories: [Category] = []
     var selectedCategory: Category?
     var selectedRulePartIndex: Int?
+    var preferredCategoriesIndices: [Int]?
     let interactor = Interactor()
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        retrievePreferredCategories()
 
         // Do any additional setup after loading the view.
         configure(collectionView: collectionView)
@@ -26,7 +28,6 @@ class CategoryListViewController: UIViewController {
         
         // rotate and lock orientation
         AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,6 +51,13 @@ class CategoryListViewController: UIViewController {
         }
     }
 
+    /// retrieves the preferred categories indices from the Userdefaults which will later be used to  present the corresponding categories in the "preferred categories" section
+    func retrievePreferredCategories() {
+        let defaults = UserDefaults.standard
+        if let readPreferredCategoriesIndices = defaults.object(forKey: "PreferredCategories") as? [Int] {
+            self.preferredCategoriesIndices = readPreferredCategoriesIndices
+        }
+    }
 }
 
 extension CategoryListViewController: UIViewControllerTransitioningDelegate {

@@ -46,6 +46,7 @@ extension MyRulesViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    /// retrieve the image for the category which the rule's consequent belongs to
     func getImageForConsequentCategory (rule: Rule) -> UIImage? {
         let itemIndex = self.exampleCategories.index(where: { (item: Category) -> Bool in
             var found = false
@@ -59,6 +60,7 @@ extension MyRulesViewController: UITableViewDelegate, UITableViewDataSource {
         return exampleCategories[itemIndex ?? 0].image
     }
     
+    /// fills the antecdents label with all the antecedents and their connecting logical operators
     func fillAntecedentLabel(rule: Rule) -> String {
         var antecedentString = ""
         if rule.antecedents?.count ?? 0 > 0 {

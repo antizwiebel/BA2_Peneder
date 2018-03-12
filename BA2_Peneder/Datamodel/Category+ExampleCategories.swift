@@ -17,21 +17,21 @@ extension Category {
         var categories = [Category]()
         
        
-        let bodyTemperatureFuzzyValues = [FuzzyValue(title: "boiling", minimum: 8, maximum: 12),
-            FuzzyValue(title: "hot", minimum: 6, maximum: 10),
-            FuzzyValue(title: "warm", minimum: 4, maximum: 8),
-            FuzzyValue(title: "cold", minimum: 2, maximum: 6),
-            FuzzyValue(title: "icy", minimum: -2, maximum: 4)]
-        let healthFuzzyValues = [FuzzyValue(title: "excellent", minimum: 8, maximum: 12),
-                                          FuzzyValue(title: "good", minimum: 6, maximum: 10),
-                                          FuzzyValue(title: "well-adjusted", minimum: 4, maximum: 8),
-                                          FuzzyValue(title: "reasonable", minimum: 2, maximum: 6),
-                                          FuzzyValue(title: "poor", minimum: -2, maximum: 4)]
-        let fitnessFuzzyValues = [FuzzyValue(title: "excellent", minimum: 8, maximum: 12),
-                                          FuzzyValue(title: "good", minimum: 6, maximum: 10),
-                                          FuzzyValue(title: "average", minimum: 4, maximum: 8),
-                                          FuzzyValue(title: "lacking", minimum: 2, maximum: 6),
-                                          FuzzyValue(title: "out of shape", minimum: -2, maximum: 4)]
+        let bodyTemperatureFuzzyValues = [FuzzyValue(title: "boiling", minimum: 7.5, maximum: 12.5),
+            FuzzyValue(title: "hot", minimum: 5, maximum: 10),
+            FuzzyValue(title: "warm", minimum: 2.5, maximum: 7.5),
+            FuzzyValue(title: "cold", minimum: 0, maximum: 5),
+            FuzzyValue(title: "icy", minimum: -2.5, maximum: 2.5)]
+        let healthFuzzyValues = [FuzzyValue(title: "excellent", minimum: 7.5, maximum: 12.5),
+                                          FuzzyValue(title: "good", minimum: 5, maximum: 10),
+                                          FuzzyValue(title: "well-adjusted", minimum: 2.5, maximum: 7.5),
+                                          FuzzyValue(title: "reasonable", minimum: 0, maximum: 5),
+                                          FuzzyValue(title: "poor", minimum: -2.5, maximum: 2.5)]
+        let fitnessFuzzyValues = [FuzzyValue(title: "excellent", minimum: 7.5, maximum: 12.5),
+                                          FuzzyValue(title: "good", minimum: 5, maximum: 10),
+                                          FuzzyValue(title: "average", minimum: 2.5, maximum: 7.5),
+                                          FuzzyValue(title: "lacking", minimum: 0, maximum: 5),
+                                          FuzzyValue(title: "out of shape", minimum: -2.5, maximum: 2.5)]
         //health category
         let healthCategoryItem = CategoryItem(name: "body temperature", fuzzyValues: bodyTemperatureFuzzyValues)
         let healthCategoryItem2 = CategoryItem(name: "health", fuzzyValues: healthFuzzyValues)
@@ -40,16 +40,16 @@ extension Category {
         
         categories.append(Category(categoryTitle: "Health", categorySubTitle: "Everything about a person's health and well-being", categoryItems: healthCategoryItems, image: UIImage(named: "Health")!))
         
-        let weatherFuzzyValues = [FuzzyValue(title: "hot", minimum: 8, maximum: 12),
-                                 FuzzyValue(title: "warm", minimum: 6, maximum: 10),
-                                 FuzzyValue(title: "fresh", minimum: 4, maximum: 8),
-                                 FuzzyValue(title: "cold", minimum: 2, maximum: 6),
-                                 FuzzyValue(title: "frosty", minimum: -2, maximum: 4)]
-        let precipitationFuzzyValues = [FuzzyValue(title: "torrential", minimum: 8, maximum: 12),
-                                  FuzzyValue(title: "hard", minimum: 6, maximum: 10),
-                                  FuzzyValue(title: "wet", minimum: 4, maximum: 8),
-                                  FuzzyValue(title: "gentle", minimum: 2, maximum: 6),
-                                  FuzzyValue(title: "soft", minimum: -2, maximum: 4)]
+        let weatherFuzzyValues = [FuzzyValue(title: "hot", minimum: 7.5, maximum: 12.5),
+                                 FuzzyValue(title: "warm", minimum: 5, maximum: 10),
+                                 FuzzyValue(title: "fresh", minimum: 2.5, maximum: 7.5),
+                                 FuzzyValue(title: "cold", minimum: 0, maximum: 5),
+                                 FuzzyValue(title: "frosty", minimum: -2.5, maximum: 2.5)]
+        let precipitationFuzzyValues = [FuzzyValue(title: "torrential", minimum: 7.5, maximum: 12.5),
+                                  FuzzyValue(title: "hard", minimum: 5, maximum: 10),
+                                  FuzzyValue(title: "wet", minimum: 2.5, maximum: 7.5),
+                                  FuzzyValue(title: "gentle", minimum: 0, maximum: 5),
+                                  FuzzyValue(title: "soft", minimum: -2.5, maximum: 2.5)]
         //weather category
         let weatherCategoryItem = CategoryItem(name: "temperature", fuzzyValues: bodyTemperatureFuzzyValues)
         let weatherCategoryItem2 = CategoryItem(name: "weather", fuzzyValues: weatherFuzzyValues)
@@ -60,11 +60,11 @@ extension Category {
         
         //outdoor sports category
         
-        let sportsFuzzyValues = [FuzzyValue(title: "excellent", minimum: 8, maximum: 12),
-            FuzzyValue(title: "good", minimum: 6, maximum: 10),
-            FuzzyValue(title: "average", minimum: 4, maximum: 8),
-            FuzzyValue(title: "bad", minimum: 2, maximum: 6),
-            FuzzyValue(title: "poor", minimum: -2, maximum: 4)]
+        let sportsFuzzyValues = [FuzzyValue(title: "excellent", minimum: 7.5, maximum: 12.5),
+            FuzzyValue(title: "good", minimum: 5, maximum: 10),
+            FuzzyValue(title: "average", minimum: 2.5, maximum: 7.5),
+            FuzzyValue(title: "bad", minimum: 0, maximum: 5),
+            FuzzyValue(title: "poor", minimum: -2.5, maximum: 2.5)]
         
         let sampleCategoryItem = CategoryItem(name: "running", fuzzyValues: sportsFuzzyValues)
         let sampleCategoryItem2 = CategoryItem(name: "hiking", fuzzyValues: sportsFuzzyValues)
@@ -74,7 +74,6 @@ extension Category {
         let sampleCategoryItems = [sampleCategoryItem, sampleCategoryItem2, sampleCategoryItem3, sampleCategoryItem4, sampleCategoryItem5]
         
         categories.append(Category(categoryTitle: "Outdoor Sports", categorySubTitle: "Everything about outdoor sports", categoryItems: sampleCategoryItems, image: UIImage(named: "Running")!))
-        
         
         return categories
     }

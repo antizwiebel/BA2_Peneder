@@ -39,18 +39,8 @@ class SettingsTableViewController: UITableViewController {
         
         headerView.layer.mask = headerMaskLayer
         updateImageView()
-        
-        retrieveUserFilters()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        retrieveUserFilters()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        retrieveUserFilters()
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -76,21 +66,6 @@ class SettingsTableViewController: UITableViewController {
         path.addLine(to: CGPoint(x: headerRect.width, y: headerRect.height))
         path.addLine(to: CGPoint(x: 0, y: headerRect.height))
         headerMaskLayer?.path = path.cgPath
-    }
-    
-    func retrieveUserFilters() {
-        let defaults = UserDefaults.standard
-        
-        if let preferredCategories = defaults.object(forKey: "PreferredCategories") as? [Category] {
-            var preferredCategoriesString = ""
-            for index in 0...preferredCategories.count-1 {
-                preferredCategoriesString.append(preferredCategories[index].title)
-                if index !=  preferredCategories.count-1{
-                    preferredCategoriesString.append(", ")
-                }
-            }
-            self.tableView.cellForRow(at: IndexPath(row: 0, section: 1))?.detailTextLabel?.text = preferredCategoriesString
-        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

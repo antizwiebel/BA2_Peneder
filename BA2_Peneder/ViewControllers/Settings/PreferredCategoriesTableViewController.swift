@@ -11,7 +11,7 @@ import UIKit
 class PreferredCategoriesTableViewController: UITableViewController {
 
     var categories: [Category] = []
-    var selectedCategories: [Category]?
+    var selectedCategoriesIndices: [Int]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class PreferredCategoriesTableViewController: UITableViewController {
         tableView.delegate = self
         tableView.tableFooterView = UIView(frame: .zero)
         self.categories = Category.getExampleCategories()
-
+        retrievePreferredCategories()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,55 +49,40 @@ class PreferredCategoriesTableViewController: UITableViewController {
 
     @IBAction func saveButtonPressed(_ sender: Any) {
         let defaults = UserDefaults.standard
-        //defaults.set(operationTypes[selectedOperationTypeIndex ?? 0], forKey: "OperationType")
+        defaults.set(selectedCategoriesIndices, forKey: "PreferredCategories")
         
         defaults.synchronize()
         self.navigationController?.popViewController(animated: true)
     }
     
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+   
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if selectedCategoriesIndices == nil {
+            selectedCategoriesIndices = [Int]()
+        }
+        //check if item is already in selected categories, if yes, delete it and remove checkmark from cell and if no, insert it and add a checkmark to cell
+        if let index = selectedCategoriesIndices?.index(where: { $0 == indexPath.row }) {
+            selectedCategoriesIndices?.remove(at: index)
+            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+        } else {
+            selectedCategoriesIndices?.append(indexPath.row)
+            tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
 
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    
+    /// retrieves the preferred categories from the Userdefaults and selects the corresponding cells as well as adding a checkmark on the right
+    func retrievePreferredCategories() {
+        let defaults = UserDefaults.standard
+        
+        if let preferredCategoriesIndices = defaults.object(forKey: "PreferredCategories") as? [Int] {
+            for index in preferredCategoriesIndices {
+                let preferredCategoriesIndex =  IndexPath(row: index, section: 0)
+                tableView.selectRow(at: preferredCategoriesIndex, animated: true, scrollPosition: UITableViewScrollPosition.bottom)
+                tableView.cellForRow(at: preferredCategoriesIndex)?.accessoryType =    UITableViewCellAccessoryType.checkmark
+            }
+        }
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

@@ -65,6 +65,7 @@
 		11E99F01203EB6D500DCCDD1 /* CategoryItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11E99EFF203EB6D500DCCDD1 /* CategoryItemTableViewCell.xib */; };
 		11F241992040CF6C00DBDB34 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F241982040CF6C00DBDB34 /* Category.swift */; };
 		11F2419B2040D02900DBDB34 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2419A2040D02900DBDB34 /* CategoryItem.swift */; };
+		11F46FEB20567B43000DF7E2 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F46FE920567B43000DF7E2 /* SectionHeader.swift */; };
 		409E6E121880A49DFD1C764B /* Pods_BA2_Peneder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB731756A26C65A14798588E /* Pods_BA2_Peneder.framework */; };
 		7ECF964863288424C10663AE /* Pods_BA2_PenederUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D6849CDC3D5F1878F7FEC2B /* Pods_BA2_PenederUITests.framework */; };
 		97610B39D779619F14C19A0F /* Pods_BA2_PenederTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A59B1641FE7629FBF8FDCE0 /* Pods_BA2_PenederTests.framework */; };
@@ -152,6 +153,7 @@
 		11E99EFF203EB6D500DCCDD1 /* CategoryItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryItemTableViewCell.xib; sourceTree = "<group>"; };
 		11F241982040CF6C00DBDB34 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		11F2419A2040D02900DBDB34 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
+		11F46FE920567B43000DF7E2 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		53F392A840B9782D595AC4BE /* Pods-BA2_PenederUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BA2_PenederUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BA2_PenederUITests/Pods-BA2_PenederUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D6849CDC3D5F1878F7FEC2B /* Pods_BA2_PenederUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BA2_PenederUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F4023D8FE64AAADE8CB7895 /* Pods-BA2_PenederTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BA2_PenederTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BA2_PenederTests/Pods-BA2_PenederTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				117B8ADD2051DF89008A6F49 /* EvaluatedRuleTableViewCell.swift */,
 				117B8ADE2051DF89008A6F49 /* EvaluatedRuleTableViewCell.xib */,
 				117B8AE72052974C008A6F49 /* CrispValueCell.swift */,
+				11F46FE920567B43000DF7E2 /* SectionHeader.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -759,6 +762,7 @@
 				11CC9AED203DDD0600CE888E /* WeatherCollectionViewCell.swift in Sources */,
 				11A31BD720476197000C515E /* DismissAnimator.swift in Sources */,
 				117B8AE42051E80A008A6F49 /* UIViewController+ReadSaveRulesCSV.swift in Sources */,
+				11F46FEB20567B43000DF7E2 /* SectionHeader.swift in Sources */,
 				117B8ACD204FE4BA008A6F49 /* PreferredCategoriesTableViewController.swift in Sources */,
 				117B8AD120519B7D008A6F49 /* RuleEvaluationViewController.swift in Sources */,
 				117B8AC9204FD041008A6F49 /* SettingsTableViewController.swift in Sources */,
