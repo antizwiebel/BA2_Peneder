@@ -14,17 +14,24 @@ class EvaluatedRuleTableViewCell: UITableViewCell {
     @IBOutlet weak var consequentLabel: UILabel!
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var antecedentsLabel: UILabel!
-    
     @IBOutlet weak var membershipsLabel: UILabel!
+    @IBOutlet weak var gradientImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        gradientImage.layer.cornerRadius = 15.0
         shadowView.layer.cornerRadius = 15.0
+        //gradientImage.clipsToBounds = true
         self.applyShadow(width: 10, height: 10)
-
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        self.applyShadow(width: 10, height: 10)
+    }
+    
+    override func layoutIfNeeded() {
+        super.layoutIfNeeded()
         self.applyShadow(width: 10, height: 10)
     }
     

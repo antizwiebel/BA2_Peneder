@@ -33,7 +33,7 @@ extension CategoryItemViewController: UITableViewDelegate, UITableViewDataSource
                 cell = tableView.dequeueReusableCell(withIdentifier: "CategoryOverviewCell") as! CategoryOverviewTableViewCell!
             }
             cell?.selectionStyle = UITableViewCellSelectionStyle.none
-            cell?.titleLabel.text = "Select value for " + (self.categoryItem?.name ?? "N/A")
+            cell?.titleLabel.text = "Select value for " + (self.categoryItem?.title ?? "N/A")
             cell?.subTitleLabel.text = ""
             cell?.view.alpha = 0
             cell?.imageView?.image = self.categoryImage ?? UIImage (named: "Weather")
@@ -57,10 +57,11 @@ extension CategoryItemViewController: UITableViewDelegate, UITableViewDataSource
             //create selected rulepart and send to NewRule view
             let selectedFuzzyValue = self.categoryItem?.fuzzyValues[indexPath.row-1]
             //TODO: include possibility to select hedge?
-            self.selectedRulepart = RulePart (variable: categoryItem?.name ?? "N/A", hedge: "", fuzzyValue: selectedFuzzyValue ?? FuzzyValue(title: "N/A"))
+            self.selectedRulepart = RulePart (variable: categoryItem?.title ?? "N/A", hedge: "", fuzzyValue: selectedFuzzyValue ?? FuzzyValue(title: "N/A"))
             performSegue(withIdentifier: "unwindToNewRule", sender: self)
         }
     }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 && indexPath.row == 0 {

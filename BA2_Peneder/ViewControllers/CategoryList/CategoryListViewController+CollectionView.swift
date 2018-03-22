@@ -46,16 +46,16 @@ extension CategoryListViewController: UICollectionViewDataSource, UICollectionVi
         case 0:
             cell.titleLabel.text = categories[ self.preferredCategoriesIndices?[indexPath.row] ?? 0].title
             cell.subTitleLabel.text = categories[self.preferredCategoriesIndices?[indexPath.row] ?? 0].subTitle
-            cell.imageView.image = categories[self.preferredCategoriesIndices?[indexPath.row] ?? 0].image
+            cell.imageView.image = categories[self.preferredCategoriesIndices?[indexPath.row] ?? 0].image ?? UIImage(named: "Gradient")
         //"all categories" section
         case 1:
             cell.titleLabel.text = categories[indexPath.row].title
             cell.subTitleLabel.text = categories[indexPath.row].subTitle
-            cell.imageView.image = categories[indexPath.row].image
+            cell.imageView.image = categories[indexPath.row].image ?? UIImage(named: "Gradient")
         default:
             cell.titleLabel.text = categories[indexPath.row].title
             cell.subTitleLabel.text = categories[indexPath.row].subTitle
-            cell.imageView.image = categories[indexPath.row].image
+            cell.imageView.image = categories[indexPath.row].image ?? UIImage(named: "Gradient")
         }
         return cell
     }
@@ -120,10 +120,12 @@ extension CategoryListViewController: UICollectionViewDataSource, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if collectionView.cellForItem(at: indexPath) != nil {
-            self.selectedCategory = categories[indexPath.row]
-            performSegue(withIdentifier: "showDetail", sender: self)
+        if indexPath.section == 1 {
+            self.selectedCategory = self.categories[indexPath.row]
+        } else {
+            self.selectedCategory = self.categories[self.preferredCategoriesIndices?[indexPath.row] ?? 0]
         }
+        performSegue(withIdentifier: "showDetail", sender: self)
     }
     
 }

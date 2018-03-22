@@ -84,8 +84,15 @@ extension RuleEvaluationViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.tableView.deselectRow(at: indexPath, animated: true)        
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        let cell = tableView.cellForRow(at: indexPath) as? RuleTableViewCell
+        
+        self.selectedRuleIndex = indexPath.row
+        cell?.setSelected(false, animated: true)
+        
+        performSegue(withIdentifier: "showRuleCreator", sender: self)
     }
+    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 300

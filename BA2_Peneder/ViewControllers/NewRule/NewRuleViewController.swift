@@ -16,6 +16,7 @@ class NewRuleViewController: UIViewController {
     var rule: Rule?
     var selectedRulePartIndex: Int?
     var selectedRuleIndex: Int?
+    var navigatedFromMyRules: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,13 @@ class NewRuleViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         canCreateRule()
+        if self.selectedRuleIndex != -1 {
+            self.navigationItem.title = "Update Rule"
+            self.createRuleButton.setTitle("Update", for: .normal)
+        } else {
+            self.navigationItem.title = "Create New Rule"
+            self.createRuleButton.setTitle("Create", for: .normal)
+        }
     }
     
     ///checks if the current rule has at least one antecedent and consequent and, if yes, enables the create button
@@ -49,7 +57,11 @@ class NewRuleViewController: UIViewController {
     
     @IBAction func onCreateButtonTouched(_ sender: Any) {
         print(self.rule!)
-        performSegue(withIdentifier: "unwindToMyRules", sender: self)
+        if navigatedFromMyRules ?? true == true {
+            performSegue(withIdentifier: "unwindToMyRules", sender: self)
+        } else {
+            performSegue(withIdentifier: "unwindToRuleEvaluation", sender: self)
+        }
     }
     
     // MARK: - Navigation
@@ -76,6 +88,21 @@ class NewRuleViewController: UIViewController {
                 } else if selectedRuleIndex ?? 0 == -1 {
                     destinationViewController.rules?.append(rule!)
                 }
+                destinationViewController.createCSVFile(rules: destinationViewController.rules)
+                destinationViewController.tableView.reloadData()
+            }
+        case "unwindToRuleEvaluation":
+            // Unwind back to the MyRulesViewController with the newly created or updated rule
+            let destinationViewController = segue.destination as! RuleEvaluationViewController
+            if self.rule != nil {
+                //update existing rule?
+                if selectedRuleIndex ?? 0 >= 0 {
+                    destinationViewController.rules?[selectedRuleIndex ?? 0] = rule!
+                    //insert new rule at the end?
+                } else if selectedRuleIndex ?? 0 == -1 {
+                    destinationViewController.rules?.append(rule!)
+                }
+                destinationViewController.createCSVFile(rules: destinationViewController.rules)
                 destinationViewController.tableView.reloadData()
             }
         default:

@@ -46,7 +46,7 @@ extension CategoryDetailViewController: UITableViewDelegate, UITableViewDataSour
             tableView.register(UINib(nibName: "CategoryItemTableViewCell", bundle: nil), forCellReuseIdentifier: "CategoryItemCell")
             cell = tableView.dequeueReusableCell(withIdentifier: "CategoryItemCell") as! CategoryItemTableViewCell!
         }
-        cell?.label.text = category?.categoryItems[indexPath.row-1].name ?? "N/A"
+        cell?.label.text = category?.categoryItems[indexPath.row-1].title ?? "N/A"
         
         return cell!
     }

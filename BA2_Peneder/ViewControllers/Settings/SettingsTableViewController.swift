@@ -69,7 +69,7 @@ class SettingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -80,6 +80,8 @@ class SettingsTableViewController: UITableViewController {
         if indexPath.row == 1 {
             let viewController = CrispValuesForCategoriesViewController()
             self.navigationController?.pushViewController(viewController, animated: true)
+        } else if indexPath.row == 2 {
+            //TODO: insert file import feature
         }
     }
     

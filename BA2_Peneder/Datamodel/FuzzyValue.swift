@@ -28,7 +28,7 @@ public class FuzzyValue: CustomStringConvertible {
     }
     
     /**
-     Initializes a new Rulepart with a provided variable and sets the hedge and fuzzy value to an empty string.
+     Initializes a new Rulepart with a provided variable and sets the minimum and maximum value to 0.
      */
     init(title: String) {
         self.title = title

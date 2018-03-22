@@ -1,0 +1,53 @@
+{
+  "categories": [
+   {
+      "title":"Outdoor Sports",
+      "subTitle":"All about outdoor sports",
+      "image": "OutdoorSports",
+      "categoryItems": [
+        { "title":"running", "crispValue": 0, "fuzzyValues":[ {"title":"excellent", "minimum":7.5, "maximum": 12 },
+          {"title":"good", "minimum":4.5, "maximum": 8 }
+         ]},
+        { "title":"hiking", "crispValue": 4, "fuzzyValues":[ {"title":"excellent", "minimum":7.5, "maximum": 12 },
+          {"title":"good", "minimum":4.5, "maximum": 8 }
+         ]},
+        { "title":"cycling", "crispValue": 0, "fuzzyValues":[ {"title":"excellent", "minimum":7.5, "maximum": 12 },
+          {"title":"good", "minimum":4.5, "maximum": 8 }
+         ]}
+      ]
+   },
+   {
+      "title":"Weather",
+      "subTitle":"All about the weather and temperature",
+      "image": "Weather",
+      "categoryItems": [
+        { "title":"temperature", "crispValue": 0, "fuzzyValues":[ {"title":"excellent", "minimum":7.5, "maximum": 12 },
+          {"title":"good", "minimum":4.5, "maximum": 8 }
+         ]},
+        { "title":"weather", "crispValue": 4, "fuzzyValues":[ {"title":"excellent", "minimum":7.5, "maximum": 12 },
+          {"title":"good", "minimum":4.5, "maximum": 8 }
+         ]},
+        { "title":"precipitation", "crispValue": 0, "fuzzyValues":[ {"title":"excellent", "minimum":7.5, "maximum": 12 },
+          {"title":"good", "minimum":4.5, "maximum": 8 }
+         ]}
+      ]
+   },
+   {
+      "title":"Health",
+      "subTitle":"All about a person's health",
+      "image": "Health",
+      "categoryItems": [
+        { "title":"body temperature", "crispValue": 0, "fuzzyValues":[ {"title":"excellent", "minimum":7.5, "maximum": 12 },
+          {"title":"good", "minimum":4.5, "maximum": 8 }
+         ]},
+        { "title":"health", "crispValue": 4, "fuzzyValues":[ {"title":"excellent", "minimum":7.5, "maximum": 12 },
+          {"title":"good", "minimum":4.5, "maximum": 8 }
+         ]},
+        { "title":"fitness", "crispValue": 0, "fuzzyValues":[ {"title":"excellent", "minimum":7.5, "maximum": 12 },
+          {"title":"good", "minimum":4.5, "maximum": 8 }
+         ]}
+      ]
+   }
+]
+
+}

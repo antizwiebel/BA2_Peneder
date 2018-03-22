@@ -31,6 +31,11 @@ class RuleTableViewCell: UITableViewCell {
         self.applyShadow(width: 10, height: 10)
     }
     
+    override func layoutIfNeeded() {
+        super.layoutIfNeeded()
+        self.applyShadow(width: 10, height: 10)
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

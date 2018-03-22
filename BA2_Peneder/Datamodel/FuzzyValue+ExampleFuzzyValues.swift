@@ -38,7 +38,11 @@ extension FuzzyValue {
                                       FuzzyValue(title: "reasonable", minimum: 0, maximum: 5),
                                       FuzzyValue(title: "poor", minimum: -2.5, maximum: 2.5),
                                       FuzzyValue(title: "boiling", minimum: 7.5, maximum: 12.5),
-                                      FuzzyValue(title: "icy", minimum: -2.5, maximum: 2.5)]
+                                      FuzzyValue(title: "icy", minimum: -2.5, maximum: 2.5),
+                                      FuzzyValue(title: "generous", minimum: 7.5, maximum: 12.5),
+                                      FuzzyValue(title: "cheap", minimum: -2.5, maximum: 2.5),
+                                      FuzzyValue(title: "delicious", minimum: 7.5, maximum: 12.5),
+                                      FuzzyValue(title: "rancid", minimum: -2.5, maximum: 2.5)]
             //add header row
             csvText.append("title,minimum,maximum\n")
             

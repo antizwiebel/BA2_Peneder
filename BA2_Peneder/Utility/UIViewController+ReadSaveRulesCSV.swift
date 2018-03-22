@@ -47,34 +47,36 @@ extension UIViewController {
         //HEADER: variable,hedge,fuzzyValue,operator
         
         let stream = InputStream(url: (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("myRules.csv"))!)
-        let csv = try! CSVReader(stream: stream!, hasHeaderRow: true)
-        print(csv.headerRow ?? "empty header!")
         
         var readRules = [Rule]()
         
-        var readRule = Rule()
-        
-        let fuzzyValues = FuzzyValue.retrieveExampleFuzzyValues()
-        
-        while csv.next() != nil {
-            switch csv["operator"]! {
-            case "C":
-                readRule.consequent = RulePart (variable: csv["variable"]!, hedge: csv["hedge"]!, fuzzyValue: getFuzzyValueForTitle(title: csv["fuzzyValue"]!, fuzzyValues: fuzzyValues))
-                readRule.logicalOperators?.append(LogicalOperator.AND)
-            case "AND":
-                readRule.antecedents?.append(RulePart (variable: csv["variable"]!, hedge: csv["hedge"]!, fuzzyValue: getFuzzyValueForTitle(title: csv["fuzzyValue"]!, fuzzyValues: fuzzyValues)))
-                readRule.logicalOperators?.append(LogicalOperator.AND)
-            case "OR":
-                readRule.antecedents?.append(RulePart (variable: csv["variable"]!, hedge: csv["hedge"]!, fuzzyValue: getFuzzyValueForTitle(title: csv["fuzzyValue"]!, fuzzyValues: fuzzyValues)))
-                readRule.logicalOperators?.append(LogicalOperator.OR)
-            case "END":
-                readRule.antecedents?.append(RulePart (variable: csv["variable"]!, hedge: csv["hedge"]!, fuzzyValue: getFuzzyValueForTitle(title: csv["fuzzyValue"]!, fuzzyValues: fuzzyValues)))
-                //calculate degree of support for read rule
-                readRule.degreeOfSupport = MembershipCalculator.defuzzifyRule(rule: readRule, crispValues: getCrispValuesForRule(rule: readRule))
-                readRules.append(readRule)
-                readRule = Rule()
-            default:
-                print("Failed to read file")
+        if let csv = try? CSVReader(stream: stream!, hasHeaderRow: true) {
+            print(csv.headerRow ?? "empty header!")
+            
+            var readRule = Rule()
+            
+            let fuzzyValues = FuzzyValue.retrieveExampleFuzzyValues()
+            
+            while csv.next() != nil {
+                switch csv["operator"]! {
+                case "C":
+                    readRule.consequent = RulePart (variable: csv["variable"]!, hedge: csv["hedge"]!, fuzzyValue: getFuzzyValueForTitle(title: csv["fuzzyValue"]!, fuzzyValues: fuzzyValues))
+                    readRule.logicalOperators?.append(LogicalOperator.AND)
+                case "AND":
+                    readRule.antecedents?.append(RulePart (variable: csv["variable"]!, hedge: csv["hedge"]!, fuzzyValue: getFuzzyValueForTitle(title: csv["fuzzyValue"]!, fuzzyValues: fuzzyValues)))
+                    readRule.logicalOperators?.append(LogicalOperator.AND)
+                case "OR":
+                    readRule.antecedents?.append(RulePart (variable: csv["variable"]!, hedge: csv["hedge"]!, fuzzyValue: getFuzzyValueForTitle(title: csv["fuzzyValue"]!, fuzzyValues: fuzzyValues)))
+                    readRule.logicalOperators?.append(LogicalOperator.OR)
+                case "END":
+                    readRule.antecedents?.append(RulePart (variable: csv["variable"]!, hedge: csv["hedge"]!, fuzzyValue: getFuzzyValueForTitle(title: csv["fuzzyValue"]!, fuzzyValues: fuzzyValues)))
+                    //calculate degree of support for read rule
+                    readRule.degreeOfSupport = MembershipCalculator.defuzzifyRule(rule: readRule, crispValues: getCrispValuesForRule(rule: readRule))
+                    readRules.append(readRule)
+                    readRule = Rule()
+                default:
+                    print("Failed to read file")
+                }
             }
         }
         print (readRules)
@@ -88,13 +90,13 @@ extension UIViewController {
         for antecedent in rule.antecedents! {
             for category in categories {
                 if let itemIndex = category.categoryItems.index(where: { (item: CategoryItem) -> Bool in
-                    if item.name == antecedent.variable {
-                        print( item.name + " " + antecedent.variable)
+                    if item.title == antecedent.variable {
+                        print( item.title + " " + antecedent.variable)
                     }
-                    return item.name == antecedent.variable
+                    return item.title == antecedent.variable
                 }) {
-                    let crispValue  = UserDefaults.standard.float(forKey: category.title+category.categoryItems[itemIndex].name)
-                    print(category.title+category.categoryItems[itemIndex].name)
+                    let crispValue  = UserDefaults.standard.float(forKey: category.title+category.categoryItems[itemIndex].title)
+                    print(category.title+category.categoryItems[itemIndex].title)
                     print("Retrieved Crispvalue: " + crispValue.description)
                     crispValues.append(crispValue)
                 }

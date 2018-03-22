@@ -16,8 +16,10 @@ class PreferredCategoriesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        self.clearsSelectionOnViewWillAppear = false
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView(frame: .zero)
@@ -82,6 +84,7 @@ class PreferredCategoriesTableViewController: UITableViewController {
                 tableView.selectRow(at: preferredCategoriesIndex, animated: true, scrollPosition: UITableViewScrollPosition.bottom)
                 tableView.cellForRow(at: preferredCategoriesIndex)?.accessoryType =    UITableViewCellAccessoryType.checkmark
             }
+            self.selectedCategoriesIndices = preferredCategoriesIndices
         }
     }
     

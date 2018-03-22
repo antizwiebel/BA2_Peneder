@@ -10,7 +10,7 @@ import UIKit
 import MessageUI
 import CSV
 
-class MyRulesViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class MyRulesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,10 +22,16 @@ class MyRulesViewController: UIViewController, MFMailComposeViewControllerDelega
         super.viewDidLoad()
         configure(tableView: tableView)
         self.exampleCategories = Category.getExampleCategories()
+        Category.readExampleCategories()
         self.rules = readFromCSVFile(rules: rules)
         self.tableView.reloadData()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        self.rules = readFromCSVFile(rules: rules)
+        self.tableView.reloadData()
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         createCSVFile(rules: rules)
         print("VIEW DISAPPEARED")
@@ -72,11 +78,7 @@ class MyRulesViewController: UIViewController, MFMailComposeViewControllerDelega
             }
         }
     }
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true, completion: nil)
-    }
-    
+
     func showErrorAlert(_ title: String, msg: String)  {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.alert)
         self.present(alert, animated: true, completion: nil)
@@ -113,7 +115,6 @@ class MyRulesViewController: UIViewController, MFMailComposeViewControllerDelega
     
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
@@ -124,6 +125,7 @@ class MyRulesViewController: UIViewController, MFMailComposeViewControllerDelega
             destinationViewController.rule = rules?[selectedRuleIndex!]
         }
         destinationViewController.selectedRuleIndex = selectedRuleIndex ?? -1
+        destinationViewController.navigatedFromMyRules = true
     }
     
 

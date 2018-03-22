@@ -9,8 +9,11 @@
 import Foundation
 import UIKit
 
+
+
+
 /// A category contains further items that are used to browse through possible variables and fuzzy values that can be used to construct a rule. Features a title, subtitle and a striking image to explain the purpose and its content to the user
-public class Category: NSObject {
+public class Category {
     
     /// The title of the category
     public var title: String = "Test"
@@ -21,6 +24,10 @@ public class Category: NSObject {
     /// A striking image that helps to visually identify a category at a glance
     public var image: UIImage?
     
+    init() {
+        self.categoryItems = [CategoryItem]()
+    }
+    
     ///Initialize a category with all the required content.
     init(categoryTitle: String, categorySubTitle: String, categoryItems: [CategoryItem], image: UIImage) {
         self.title = categoryTitle
@@ -28,4 +35,6 @@ public class Category: NSObject {
         self.categoryItems = categoryItems
         self.image = image
     }
+    
+    
 }

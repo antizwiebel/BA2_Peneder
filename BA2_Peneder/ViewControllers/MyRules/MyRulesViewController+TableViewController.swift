@@ -33,7 +33,7 @@ extension MyRulesViewController: UITableViewDelegate, UITableViewDataSource {
         }
         if let rule = rules?[indexPath.row]{
             cell?.consequentLabel.text = rule.consequent!.variable + " is " + rule.consequent!.fuzzyValue.title
-            cell?.categoryImage.image = getImageForConsequentCategory(rule: rule) ?? UIImage (named: "Running")
+            cell?.categoryImage.image = getImageForConsequentCategory(rule: rule) ?? UIImage (named: "Rule")
             cell?.antecedentsLabel.text = fillAntecedentLabel(rule: rule)
         }
         return cell!
@@ -51,7 +51,7 @@ extension MyRulesViewController: UITableViewDelegate, UITableViewDataSource {
         let itemIndex = self.exampleCategories.index(where: { (item: Category) -> Bool in
             var found = false
             for categoryItem in item.categoryItems {
-                if categoryItem.name == rule.consequent?.variable {
+                if categoryItem.title == rule.consequent?.variable {
                     found = true
                 }
             }

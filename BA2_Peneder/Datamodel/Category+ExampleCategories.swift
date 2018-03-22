@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
 
 extension Category {
     
@@ -73,9 +74,79 @@ extension Category {
         let sampleCategoryItem5 = CategoryItem(name: "skiing", fuzzyValues: sportsFuzzyValues)
         let sampleCategoryItems = [sampleCategoryItem, sampleCategoryItem2, sampleCategoryItem3, sampleCategoryItem4, sampleCategoryItem5]
         
-        categories.append(Category(categoryTitle: "Outdoor Sports", categorySubTitle: "Everything about outdoor sports", categoryItems: sampleCategoryItems, image: UIImage(named: "Running")!))
+        categories.append(Category(categoryTitle: "Outdoor Sports", categorySubTitle: "Everything about outdoor sports", categoryItems: sampleCategoryItems, image: UIImage(named: "OutdoorSports")!))
+        
+        let foodFuzzyValues = [FuzzyValue(title: "delicious", minimum: 7.5, maximum: 12.5),
+                                  FuzzyValue(title: "good", minimum: 5, maximum: 10),
+                                  FuzzyValue(title: "average", minimum: 2.5, maximum: 7.5),
+                                  FuzzyValue(title: "bad", minimum: 0, maximum: 5),
+                                  FuzzyValue(title: "rancid", minimum: -2.5, maximum: 2.5)]
+        let tipFuzzyValues = [FuzzyValue(title: "generous", minimum: 7.5, maximum: 12.5),
+                               FuzzyValue(title: "good", minimum: 5, maximum: 10),
+                               FuzzyValue(title: "average", minimum: 2.5, maximum: 7.5),
+                               FuzzyValue(title: "bad", minimum: 0, maximum: 5),
+                               FuzzyValue(title: "cheap", minimum: -2.5, maximum: 2.5)]
+        
+        let foodCategoryItem = CategoryItem(name: "food", fuzzyValues: foodFuzzyValues)
+        let serviceCategoryItem = CategoryItem(name: "service", fuzzyValues: sportsFuzzyValues)
+        let tipCategoryItem = CategoryItem(name: "tip", fuzzyValues: tipFuzzyValues)
+        let restaurantCategoryItems = [foodCategoryItem, serviceCategoryItem, tipCategoryItem]
+
+        categories.append(Category(categoryTitle: "Restaurant", categorySubTitle: "Food, service and tips in a restaurant ", categoryItems: restaurantCategoryItems, image: UIImage(named: "Restaurant")!))
         
         return categories
+    }
+    
+    static func readExampleCategories () -> [Category]?{
+        if let path = Bundle.main.path(forResource: "example_category_file", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let jsonObj = try JSON(data: data)
+                if jsonObj != JSON.null {
+                    var readCategories = [Category]()
+                    var readCategory = Category()
+                    for category in jsonObj["categories"].arrayValue {
+                        readCategory.title =  category["title"].stringValue
+                        readCategory.subTitle =  category["title"].stringValue
+                        readCategory.image = UIImage(named: category["image"].stringValue)
+                        readCategory.categoryItems = readCategoryItemsFromArray(categoryItemArray: category["categoryItems"].arrayValue)
+                        readCategories.append(readCategory)
+                        readCategory = Category()
+                    }
+                    return readCategories
+                }
+            } catch let error {
+                print(error.localizedDescription)
+            }
+
+        }
+        return nil
+    }
+    
+    static internal func readCategoryItemsFromArray(categoryItemArray: [JSON]) -> [CategoryItem] {
+        var readCategoryItems = [CategoryItem]()
+        var readCategoryItem = CategoryItem()
+        for categoryItem in categoryItemArray {
+            readCategoryItem.title =  categoryItem["title"].stringValue
+            readCategoryItem.crispValue =  categoryItem["crispValue"].floatValue
+            readCategoryItem.fuzzyValues = readFuzzyValuesFromArray (fuzzyValueArray: categoryItem["fuzzyValues"].arrayValue)
+            readCategoryItems.append(readCategoryItem)
+            readCategoryItem = CategoryItem()
+        }
+        return readCategoryItems
+    }
+    
+    static internal func readFuzzyValuesFromArray(fuzzyValueArray: [JSON]) -> [FuzzyValue] {
+        var readFuzzyValues = [FuzzyValue]()
+        var readFuzzyValue = FuzzyValue(title: "N/A")
+        for fuzzyValue in fuzzyValueArray {
+            readFuzzyValue.title =  fuzzyValue["title"].stringValue
+            readFuzzyValue.minimum =  fuzzyValue["minimum"].doubleValue
+            readFuzzyValue.maximum =  fuzzyValue["maximum"].doubleValue
+            readFuzzyValues.append(readFuzzyValue)
+            readFuzzyValue = FuzzyValue(title: "N/A")
+        }
+        return readFuzzyValues
     }
     
     static func saveDefaultCrispValuesForItems () {
@@ -83,7 +154,7 @@ extension Category {
         let categories = getExampleCategories()
         for category in categories {
             for categoryItem in category.categoryItems {
-                userDefaults.set(0.0, forKey: category.title+categoryItem.name)
+                userDefaults.set(0.0, forKey: category.title+categoryItem.title)
             }
         }
     }

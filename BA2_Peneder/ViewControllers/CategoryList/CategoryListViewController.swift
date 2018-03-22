@@ -24,7 +24,7 @@ class CategoryListViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         configure(collectionView: collectionView)
-        self.categories = Category.getExampleCategories()
+        self.categories = Category.readExampleCategories() ?? Category.getExampleCategories()
         
         // rotate and lock orientation
         AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)

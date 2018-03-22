@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11035AB720639C9F00142E66 /* example_category_file.json in Resources */ = {isa = PBXBuildFile; fileRef = 11035AB620639C9F00142E66 /* example_category_file.json */; };
 		1153EA6620441FD700A5E038 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153EA6520441FD700A5E038 /* UIColorExtension.swift */; };
 		1153EA6820443EA100A5E038 /* CategoryItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153EA6720443EA100A5E038 /* CategoryItemViewController.swift */; };
 		1153EA6A20443EC300A5E038 /* CategoryItemViewController+TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1153EA6920443EC300A5E038 /* CategoryItemViewController+TableViewController.swift */; };
@@ -42,7 +43,6 @@
 		11A31BD520476181000C515E /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A31BD420476181000C515E /* Interactor.swift */; };
 		11A31BD720476197000C515E /* DismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A31BD620476197000C515E /* DismissAnimator.swift */; };
 		11CC9AB1203DC9BC00CE888E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AB0203DC9BC00CE888E /* AppDelegate.swift */; };
-		11CC9AB3203DC9BC00CE888E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AB2203DC9BC00CE888E /* FirstViewController.swift */; };
 		11CC9AB5203DC9BC00CE888E /* NewRuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AB4203DC9BC00CE888E /* NewRuleViewController.swift */; };
 		11CC9AB8203DC9BC00CE888E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11CC9AB6203DC9BC00CE888E /* Main.storyboard */; };
 		11CC9ABA203DC9BC00CE888E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11CC9AB9203DC9BC00CE888E /* Assets.xcassets */; };
@@ -66,6 +66,7 @@
 		11F241992040CF6C00DBDB34 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F241982040CF6C00DBDB34 /* Category.swift */; };
 		11F2419B2040D02900DBDB34 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2419A2040D02900DBDB34 /* CategoryItem.swift */; };
 		11F46FEB20567B43000DF7E2 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F46FE920567B43000DF7E2 /* SectionHeader.swift */; };
+		11F46FEE205AA365000DF7E2 /* RulesTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F46FED205AA365000DF7E2 /* RulesTabbarController.swift */; };
 		409E6E121880A49DFD1C764B /* Pods_BA2_Peneder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB731756A26C65A14798588E /* Pods_BA2_Peneder.framework */; };
 		7ECF964863288424C10663AE /* Pods_BA2_PenederUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D6849CDC3D5F1878F7FEC2B /* Pods_BA2_PenederUITests.framework */; };
 		97610B39D779619F14C19A0F /* Pods_BA2_PenederTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A59B1641FE7629FBF8FDCE0 /* Pods_BA2_PenederTests.framework */; };
@@ -89,6 +90,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		11035AB620639C9F00142E66 /* example_category_file.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = example_category_file.json; sourceTree = "<group>"; };
 		1153EA6520441FD700A5E038 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		1153EA6720443EA100A5E038 /* CategoryItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemViewController.swift; sourceTree = "<group>"; };
 		1153EA6920443EC300A5E038 /* CategoryItemViewController+TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryItemViewController+TableViewController.swift"; sourceTree = "<group>"; };
@@ -125,7 +127,6 @@
 		11A31BD620476197000C515E /* DismissAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissAnimator.swift; sourceTree = "<group>"; };
 		11CC9AAD203DC9BC00CE888E /* BA2_Peneder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BA2_Peneder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11CC9AB0203DC9BC00CE888E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		11CC9AB2203DC9BC00CE888E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		11CC9AB4203DC9BC00CE888E /* NewRuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRuleViewController.swift; sourceTree = "<group>"; };
 		11CC9AB7203DC9BC00CE888E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11CC9AB9203DC9BC00CE888E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -154,6 +155,8 @@
 		11F241982040CF6C00DBDB34 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		11F2419A2040D02900DBDB34 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		11F46FE920567B43000DF7E2 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		11F46FED205AA365000DF7E2 /* RulesTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesTabbarController.swift; sourceTree = "<group>"; };
+		11F46FEF205D31D8000DF7E2 /* BA2_Peneder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BA2_Peneder.entitlements; sourceTree = "<group>"; };
 		53F392A840B9782D595AC4BE /* Pods-BA2_PenederUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BA2_PenederUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BA2_PenederUITests/Pods-BA2_PenederUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D6849CDC3D5F1878F7FEC2B /* Pods_BA2_PenederUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BA2_PenederUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F4023D8FE64AAADE8CB7895 /* Pods-BA2_PenederTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BA2_PenederTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BA2_PenederTests/Pods-BA2_PenederTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +196,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11035AB520639C5100142E66 /* Categories JSON File */ = {
+			isa = PBXGroup;
+			children = (
+				11035AB620639C9F00142E66 /* example_category_file.json */,
+			);
+			path = "Categories JSON File";
+			sourceTree = "<group>";
+		};
 		116654A82042FBE500976B29 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,11 +307,12 @@
 		11CC9AAF203DC9BC00CE888E /* BA2_Peneder */ = {
 			isa = PBXGroup;
 			children = (
+				11035AB520639C5100142E66 /* Categories JSON File */,
+				11F46FEF205D31D8000DF7E2 /* BA2_Peneder.entitlements */,
 				116654A82042FBE500976B29 /* ViewControllers */,
 				11F241972040CCEA00DBDB34 /* Datamodel */,
 				11CC9AEF203DE31E00CE888E /* Utility */,
 				11CC9AB0203DC9BC00CE888E /* AppDelegate.swift */,
-				11CC9AB2203DC9BC00CE888E /* FirstViewController.swift */,
 				11CC9AB6203DC9BC00CE888E /* Main.storyboard */,
 				11CC9AB9203DC9BC00CE888E /* Assets.xcassets */,
 				11CC9ABB203DC9BC00CE888E /* LaunchScreen.storyboard */,
@@ -308,6 +320,7 @@
 				11CC9AF4203DE42000CE888E /* Animations */,
 				11CC9AE6203DD9C200CE888E /* Cells */,
 				1153EA6520441FD700A5E038 /* UIColorExtension.swift */,
+				11F46FED205AA365000DF7E2 /* RulesTabbarController.swift */,
 			);
 			path = BA2_Peneder;
 			sourceTree = "<group>";
@@ -495,6 +508,11 @@
 					11CC9AAC203DC9BC00CE888E = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 					11CC9AC2203DC9BC00CE888E = {
 						CreatedOnToolsVersion = 9.2;
@@ -537,6 +555,7 @@
 				117CCBEF204807260051114E /* RuleTableViewCell.xib in Resources */,
 				117B8AE02051DF89008A6F49 /* EvaluatedRuleTableViewCell.xib in Resources */,
 				11CC9AEE203DDD0600CE888E /* WeatherCollectionViewCell.xib in Resources */,
+				11035AB720639C9F00142E66 /* example_category_file.json in Resources */,
 				116654AC20430D8500976B29 /* NewRuleTableViewCell.xib in Resources */,
 				11CC9ABA203DC9BC00CE888E /* Assets.xcassets in Resources */,
 				11E99EFD203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.xib in Resources */,
@@ -634,11 +653,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BA2_Peneder/Pods-BA2_Peneder-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CSV.swift/CSV.framework",
 				"${BUILT_PRODUCTS_DIR}/CollapsibleTableSectionViewController/CollapsibleTableSectionViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSV.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CollapsibleTableSectionViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -735,6 +756,7 @@
 				1193B941203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift in Sources */,
 				117CCBF120480D540051114E /* MyRulesViewController+TableViewController.swift in Sources */,
 				117B8AE82052974C008A6F49 /* CrispValueCell.swift in Sources */,
+				11F46FEE205AA365000DF7E2 /* RulesTabbarController.swift in Sources */,
 				11A31BD520476181000C515E /* Interactor.swift in Sources */,
 				117B8ADC2051B797008A6F49 /* FuzzyValue+ExampleFuzzyValues.swift in Sources */,
 				117B8ADF2051DF89008A6F49 /* EvaluatedRuleTableViewCell.swift in Sources */,
@@ -753,7 +775,6 @@
 				1153EA6620441FD700A5E038 /* UIColorExtension.swift in Sources */,
 				11CC9AB1203DC9BC00CE888E /* AppDelegate.swift in Sources */,
 				11CC9AF3203DE37800CE888E /* UICollectionView+Reusable.swift in Sources */,
-				11CC9AB3203DC9BC00CE888E /* FirstViewController.swift in Sources */,
 				117B8AE22051E31A008A6F49 /* RuleEvaluationViewController+TableView.swift in Sources */,
 				117CCBF52048676E0051114E /* ImageView+BlurEffect.swift in Sources */,
 				11CC9AFE203DE8EC00CE888E /* BaseView.swift in Sources */,

@@ -30,7 +30,7 @@ public class MembershipCalculator {
     static func logicalRelation(membership1: Double, membership2: Double, logicalOperator: LogicalOperator) -> Double {
         if logicalOperator == LogicalOperator.AND {
             //return min(membership1, membership2)
-            return membership1 * membership2
+            return min (membership1, membership2)
         } else {
             return max(membership1, membership2)
         }
