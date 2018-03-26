@@ -1,5 +1,5 @@
 //
-//  wichser.swift
+//  RuleEvaluation.swift
 //  BA2_Peneder
 //
 //  Created by Mark Peneder on 08.03.18.
