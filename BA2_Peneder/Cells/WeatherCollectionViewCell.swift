@@ -24,7 +24,6 @@ class WeatherCollectionViewCell: BaseCategoryCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        //imageView.roundCornersForAspectFit (radius: 16.0)
         imageView.layer.cornerRadius = 15.0
         imageView.clipsToBounds = true
     }

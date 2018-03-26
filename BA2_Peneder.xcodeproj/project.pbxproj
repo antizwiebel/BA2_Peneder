@@ -19,7 +19,7 @@
 		116654B22043162500976B29 /* LogicalOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116654B12043162500976B29 /* LogicalOperator.swift */; };
 		117B8AC9204FD041008A6F49 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8AC8204FD041008A6F49 /* SettingsTableViewController.swift */; };
 		117B8ACD204FE4BA008A6F49 /* PreferredCategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8ACC204FE4BA008A6F49 /* PreferredCategoriesTableViewController.swift */; };
-		117B8ACF20518CCA008A6F49 /* MembershipCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8ACE20518CCA008A6F49 /* MembershipCalculator.swift */; };
+		117B8ACF20518CCA008A6F49 /* RuleEvaluation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8ACE20518CCA008A6F49 /* RuleEvaluation.swift */; };
 		117B8AD120519B7D008A6F49 /* RuleEvaluationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8AD020519B7D008A6F49 /* RuleEvaluationViewController.swift */; };
 		117B8ADA20519D26008A6F49 /* FuzzyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8AD920519D26008A6F49 /* FuzzyValue.swift */; };
 		117B8ADC2051B797008A6F49 /* FuzzyValue+ExampleFuzzyValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117B8ADB2051B797008A6F49 /* FuzzyValue+ExampleFuzzyValues.swift */; };
@@ -58,7 +58,6 @@
 		11CC9AF3203DE37800CE888E /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AF2203DE37800CE888E /* UICollectionView+Reusable.swift */; };
 		11CC9AFE203DE8EC00CE888E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AFD203DE8EC00CE888E /* BaseView.swift */; };
 		11CC9B00203DE91A00CE888E /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9AFF203DE91A00CE888E /* UIView+Constraints.swift */; };
-		11CC9B02203DFBF000CE888E /* UIImageView+RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC9B01203DFBF000CE888E /* UIImageView+RoundedCorners.swift */; };
 		11E99EFC203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E99EFA203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.swift */; };
 		11E99EFD203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11E99EFB203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.xib */; };
 		11E99F00203EB6D500DCCDD1 /* CategoryItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11E99EFE203EB6D500DCCDD1 /* CategoryItemTableViewCell.swift */; };
@@ -66,7 +65,6 @@
 		11F241992040CF6C00DBDB34 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F241982040CF6C00DBDB34 /* Category.swift */; };
 		11F2419B2040D02900DBDB34 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2419A2040D02900DBDB34 /* CategoryItem.swift */; };
 		11F46FEB20567B43000DF7E2 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F46FE920567B43000DF7E2 /* SectionHeader.swift */; };
-		11F46FEE205AA365000DF7E2 /* RulesTabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F46FED205AA365000DF7E2 /* RulesTabbarController.swift */; };
 		409E6E121880A49DFD1C764B /* Pods_BA2_Peneder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB731756A26C65A14798588E /* Pods_BA2_Peneder.framework */; };
 		7ECF964863288424C10663AE /* Pods_BA2_PenederUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D6849CDC3D5F1878F7FEC2B /* Pods_BA2_PenederUITests.framework */; };
 		97610B39D779619F14C19A0F /* Pods_BA2_PenederTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A59B1641FE7629FBF8FDCE0 /* Pods_BA2_PenederTests.framework */; };
@@ -102,7 +100,7 @@
 		116654B12043162500976B29 /* LogicalOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogicalOperator.swift; sourceTree = "<group>"; };
 		117B8AC8204FD041008A6F49 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		117B8ACC204FE4BA008A6F49 /* PreferredCategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferredCategoriesTableViewController.swift; sourceTree = "<group>"; };
-		117B8ACE20518CCA008A6F49 /* MembershipCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipCalculator.swift; sourceTree = "<group>"; };
+		117B8ACE20518CCA008A6F49 /* RuleEvaluation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEvaluation.swift; sourceTree = "<group>"; };
 		117B8AD020519B7D008A6F49 /* RuleEvaluationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleEvaluationViewController.swift; sourceTree = "<group>"; };
 		117B8AD920519D26008A6F49 /* FuzzyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzzyValue.swift; sourceTree = "<group>"; };
 		117B8ADB2051B797008A6F49 /* FuzzyValue+ExampleFuzzyValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FuzzyValue+ExampleFuzzyValues.swift"; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 		11CC9AF2203DE37800CE888E /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
 		11CC9AFD203DE8EC00CE888E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		11CC9AFF203DE91A00CE888E /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
-		11CC9B01203DFBF000CE888E /* UIImageView+RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+RoundedCorners.swift"; sourceTree = "<group>"; };
 		11E99EFA203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		11E99EFB203E2A1100DCCDD1 /* CategoryOverviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryOverviewTableViewCell.xib; sourceTree = "<group>"; };
 		11E99EFE203EB6D500DCCDD1 /* CategoryItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemTableViewCell.swift; sourceTree = "<group>"; };
@@ -155,7 +152,6 @@
 		11F241982040CF6C00DBDB34 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		11F2419A2040D02900DBDB34 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		11F46FE920567B43000DF7E2 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
-		11F46FED205AA365000DF7E2 /* RulesTabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesTabbarController.swift; sourceTree = "<group>"; };
 		11F46FEF205D31D8000DF7E2 /* BA2_Peneder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BA2_Peneder.entitlements; sourceTree = "<group>"; };
 		53F392A840B9782D595AC4BE /* Pods-BA2_PenederUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BA2_PenederUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BA2_PenederUITests/Pods-BA2_PenederUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D6849CDC3D5F1878F7FEC2B /* Pods_BA2_PenederUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BA2_PenederUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -319,8 +315,6 @@
 				11CC9ABE203DC9BC00CE888E /* Info.plist */,
 				11CC9AF4203DE42000CE888E /* Animations */,
 				11CC9AE6203DD9C200CE888E /* Cells */,
-				1153EA6520441FD700A5E038 /* UIColorExtension.swift */,
-				11F46FED205AA365000DF7E2 /* RulesTabbarController.swift */,
 			);
 			path = BA2_Peneder;
 			sourceTree = "<group>";
@@ -368,15 +362,15 @@
 		11CC9AEF203DE31E00CE888E /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				1153EA6520441FD700A5E038 /* UIColorExtension.swift */,
 				11CC9AF0203DE35400CE888E /* Reusable.swift */,
 				11CC9AF2203DE37800CE888E /* UICollectionView+Reusable.swift */,
 				11CC9AFD203DE8EC00CE888E /* BaseView.swift */,
 				11CC9AFF203DE91A00CE888E /* UIView+Constraints.swift */,
-				11CC9B01203DFBF000CE888E /* UIImageView+RoundedCorners.swift */,
 				1193B942203EC9630026FF00 /* UITableView+Reusable.swift */,
 				117CCBF220484EFB0051114E /* OrientationUtility.swift */,
 				117CCBF42048676E0051114E /* ImageView+BlurEffect.swift */,
-				117B8ACE20518CCA008A6F49 /* MembershipCalculator.swift */,
+				117B8ACE20518CCA008A6F49 /* RuleEvaluation.swift */,
 				117B8AE32051E80A008A6F49 /* UIViewController+ReadSaveRulesCSV.swift */,
 				117B8AE92052A14F008A6F49 /* String+FloatValue.swift */,
 			);
@@ -741,7 +735,6 @@
 			files = (
 				117B8ADA20519D26008A6F49 /* FuzzyValue.swift in Sources */,
 				116654AB20430D8500976B29 /* NewRuleTableViewCell.swift in Sources */,
-				11CC9B02203DFBF000CE888E /* UIImageView+RoundedCorners.swift in Sources */,
 				1193B93F203EC5490026FF00 /* CategoryDetailViewController.swift in Sources */,
 				116654AE20430F6A00976B29 /* Rule.swift in Sources */,
 				1153EA6820443EA100A5E038 /* CategoryItemViewController.swift in Sources */,
@@ -756,7 +749,6 @@
 				1193B941203EC5A20026FF00 /* CategoryDetailViewController+TableView.swift in Sources */,
 				117CCBF120480D540051114E /* MyRulesViewController+TableViewController.swift in Sources */,
 				117B8AE82052974C008A6F49 /* CrispValueCell.swift in Sources */,
-				11F46FEE205AA365000DF7E2 /* RulesTabbarController.swift in Sources */,
 				11A31BD520476181000C515E /* Interactor.swift in Sources */,
 				117B8ADC2051B797008A6F49 /* FuzzyValue+ExampleFuzzyValues.swift in Sources */,
 				117B8ADF2051DF89008A6F49 /* EvaluatedRuleTableViewCell.swift in Sources */,
@@ -767,7 +759,7 @@
 				11CC9B00203DE91A00CE888E /* UIView+Constraints.swift in Sources */,
 				11CC9AE1203DD57200CE888E /* CategoryListViewController.swift in Sources */,
 				11CC9AB5203DC9BC00CE888E /* NewRuleViewController.swift in Sources */,
-				117B8ACF20518CCA008A6F49 /* MembershipCalculator.swift in Sources */,
+				117B8ACF20518CCA008A6F49 /* RuleEvaluation.swift in Sources */,
 				116654B22043162500976B29 /* LogicalOperator.swift in Sources */,
 				11CC9AF1203DE35400CE888E /* Reusable.swift in Sources */,
 				11A31BD12046D5C6000C515E /* MyRulesViewController.swift in Sources */,

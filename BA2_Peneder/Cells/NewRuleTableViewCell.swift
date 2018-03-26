@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// A TableViewCell which can represent the different parts of rule in the rule creation view.
 class NewRuleTableViewCell: UITableViewCell {
 
     @IBOutlet weak var label: UILabel!

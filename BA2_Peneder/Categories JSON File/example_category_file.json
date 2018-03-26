@@ -1,53 +1,466 @@
 {
-  "categories": [
-   {
-      "title":"Outdoor Sports",
-      "subTitle":"All about outdoor sports",
-      "image": "OutdoorSports",
-      "categoryItems": [
-        { "title":"running", "crispValue": 0, "fuzzyValues":[ {"title":"excellent", "minimum":7.5, "maximum": 12 },
-          {"title":"good", "minimum":4.5, "maximum": 8 }
-         ]},
-        { "title":"hiking", "crispValue": 4, "fuzzyValues":[ {"title":"excellent", "minimum":7.5, "maximum": 12 },
-          {"title":"good", "minimum":4.5, "maximum": 8 }
-         ]},
-        { "title":"cycling", "crispValue": 0, "fuzzyValues":[ {"title":"excellent", "minimum":7.5, "maximum": 12 },
-          {"title":"good", "minimum":4.5, "maximum": 8 }
-         ]}
-      ]
-   },
-   {
-      "title":"Weather",
-      "subTitle":"All about the weather and temperature",
-      "image": "Weather",
-      "categoryItems": [
-        { "title":"temperature", "crispValue": 0, "fuzzyValues":[ {"title":"excellent", "minimum":7.5, "maximum": 12 },
-          {"title":"good", "minimum":4.5, "maximum": 8 }
-         ]},
-        { "title":"weather", "crispValue": 4, "fuzzyValues":[ {"title":"excellent", "minimum":7.5, "maximum": 12 },
-          {"title":"good", "minimum":4.5, "maximum": 8 }
-         ]},
-        { "title":"precipitation", "crispValue": 0, "fuzzyValues":[ {"title":"excellent", "minimum":7.5, "maximum": 12 },
-          {"title":"good", "minimum":4.5, "maximum": 8 }
-         ]}
-      ]
-   },
-   {
-      "title":"Health",
-      "subTitle":"All about a person's health",
-      "image": "Health",
-      "categoryItems": [
-        { "title":"body temperature", "crispValue": 0, "fuzzyValues":[ {"title":"excellent", "minimum":7.5, "maximum": 12 },
-          {"title":"good", "minimum":4.5, "maximum": 8 }
-         ]},
-        { "title":"health", "crispValue": 4, "fuzzyValues":[ {"title":"excellent", "minimum":7.5, "maximum": 12 },
-          {"title":"good", "minimum":4.5, "maximum": 8 }
-         ]},
-        { "title":"fitness", "crispValue": 0, "fuzzyValues":[ {"title":"excellent", "minimum":7.5, "maximum": 12 },
-          {"title":"good", "minimum":4.5, "maximum": 8 }
-         ]}
-      ]
-   }
-]
-
+    "categories": [
+                   {
+                   "title": "Outdoor Sports",
+                   "subTitle": "All about outdoor sports",
+                   "image": "OutdoorSports",
+                   "categoryItems": [
+                                     {
+                                     "title": "running",
+                                     "crispValue": 0,
+                                     "fuzzyValues": [
+                                                     {
+                                                     "title": "excellent",
+                                                     "minimum": 7.5,
+                                                     "maximum": 12.5
+                                                     },
+                                                     {
+                                                     "title": "good",
+                                                     "minimum": 5,
+                                                     "maximum": 10
+                                                     },
+                                                     {
+                                                     "title": "average",
+                                                     "minimum": 2.5,
+                                                     "maximum": 7.5
+                                                     },
+                                                     {
+                                                     "title": "bad",
+                                                     "minimum": 0,
+                                                     "maximum": 5
+                                                     },
+                                                     {
+                                                     "title": "poor",
+                                                     "minimum": -2.5,
+                                                     "maximum": 2.5
+                                                     }
+                                                     ]
+                                     },
+                                     {
+                                     "title": "hiking",
+                                     "crispValue": 4,
+                                     "fuzzyValues": [
+                                                     {
+                                                     "title": "excellent",
+                                                     "minimum": 7.5,
+                                                     "maximum": 12.5
+                                                     },
+                                                     {
+                                                     "title": "good",
+                                                     "minimum": 5,
+                                                     "maximum": 10
+                                                     },
+                                                     {
+                                                     "title": "average",
+                                                     "minimum": 2.5,
+                                                     "maximum": 7.5
+                                                     },
+                                                     {
+                                                     "title": "bad",
+                                                     "minimum": 0,
+                                                     "maximum": 5
+                                                     },
+                                                     {
+                                                     "title": "poor",
+                                                     "minimum": -2.5,
+                                                     "maximum": 2.5
+                                                     }
+                                                     ]
+                                     },
+                                     {
+                                     "title": "cycling",
+                                     "crispValue": 0,
+                                     "fuzzyValues": [
+                                                     {
+                                                     "title": "excellent",
+                                                     "minimum": 7.5,
+                                                     "maximum": 12.5
+                                                     },
+                                                     {
+                                                     "title": "good",
+                                                     "minimum": 5,
+                                                     "maximum": 10
+                                                     },
+                                                     {
+                                                     "title": "average",
+                                                     "minimum": 2.5,
+                                                     "maximum": 7.5
+                                                     },
+                                                     {
+                                                     "title": "bad",
+                                                     "minimum": 0,
+                                                     "maximum": 5
+                                                     },
+                                                     {
+                                                     "title": "poor",
+                                                     "minimum": -2.5,
+                                                     "maximum": 2.5
+                                                     }
+                                                     ]
+                                     },
+                                     {
+                                     "title": "skydiving",
+                                     "crispValue": 0,
+                                     "fuzzyValues": [
+                                                     {
+                                                     "title": "excellent",
+                                                     "minimum": 7.5,
+                                                     "maximum": 12.5
+                                                     },
+                                                     {
+                                                     "title": "good",
+                                                     "minimum": 5,
+                                                     "maximum": 10
+                                                     },
+                                                     {
+                                                     "title": "average",
+                                                     "minimum": 2.5,
+                                                     "maximum": 7.5
+                                                     },
+                                                     {
+                                                     "title": "bad",
+                                                     "minimum": 0,
+                                                     "maximum": 5
+                                                     },
+                                                     {
+                                                     "title": "poor",
+                                                     "minimum": -2.5,
+                                                     "maximum": 2.5
+                                                     }
+                                                     ]
+                                     },
+                                     {
+                                     "title": "football",
+                                     "crispValue": 4,
+                                     "fuzzyValues": [
+                                                     {
+                                                     "title": "excellent",
+                                                     "minimum": 7.5,
+                                                     "maximum": 12.5
+                                                     },
+                                                     {
+                                                     "title": "good",
+                                                     "minimum": 5,
+                                                     "maximum": 10
+                                                     },
+                                                     {
+                                                     "title": "average",
+                                                     "minimum": 2.5,
+                                                     "maximum": 7.5
+                                                     },
+                                                     {
+                                                     "title": "bad",
+                                                     "minimum": 0,
+                                                     "maximum": 5
+                                                     },
+                                                     {
+                                                     "title": "poor",
+                                                     "minimum": -2.5,
+                                                     "maximum": 2.5
+                                                     }
+                                                     ]
+                                     }
+                                     ]
+                   },
+                   {
+                   "title": "Weather",
+                   "subTitle": "All about the weather and temperature",
+                   "image": "Weather",
+                   "categoryItems": [
+                                     {
+                                     "title": "temperature",
+                                     "crispValue": 0,
+                                     "fuzzyValues": [
+                                                     {
+                                                     "title": "boiling",
+                                                     "minimum": 7.5,
+                                                     "maximum": 12.5
+                                                     },
+                                                     {
+                                                     "title": "hot",
+                                                     "minimum": 5,
+                                                     "maximum": 10
+                                                     },
+                                                     {
+                                                     "title": "warm",
+                                                     "minimum": 2.5,
+                                                     "maximum": 7.5
+                                                     },
+                                                     {
+                                                     "title": "cold",
+                                                     "minimum": 0,
+                                                     "maximum": 5
+                                                     },
+                                                     {
+                                                     "title": "icy",
+                                                     "minimum": -2.5,
+                                                     "maximum": 2.5
+                                                     }
+                                                     ]
+                                     },
+                                     {
+                                     "title": "weather",
+                                     "crispValue": 4,
+                                     "fuzzyValues": [
+                                                     {
+                                                     "title": "hot",
+                                                     "minimum": 7.5,
+                                                     "maximum": 12.5
+                                                     },
+                                                     {
+                                                     "title": "warm",
+                                                     "minimum": 5,
+                                                     "maximum": 10
+                                                     },
+                                                     {
+                                                     "title": "fresh",
+                                                     "minimum": 2.5,
+                                                     "maximum": 7.5
+                                                     },
+                                                     {
+                                                     "title": "cold",
+                                                     "minimum": 0,
+                                                     "maximum": 5
+                                                     },
+                                                     {
+                                                     "title": "frosty",
+                                                     "minimum": -2.5,
+                                                     "maximum": 2.5
+                                                     }
+                                                     ]
+                                     },
+                                     {
+                                     "title": "precipitation",
+                                     "crispValue": 0,
+                                     "fuzzyValues": [
+                                                     {
+                                                     "title": "torrential",
+                                                     "minimum": 7.5,
+                                                     "maximum": 12.5
+                                                     },
+                                                     {
+                                                     "title": "hard",
+                                                     "minimum": 5,
+                                                     "maximum": 10
+                                                     },
+                                                     {
+                                                     "title": "wet",
+                                                     "minimum": 2.5,
+                                                     "maximum": 7.5
+                                                     },
+                                                     {
+                                                     "title": "gentle",
+                                                     "minimum": 0,
+                                                     "maximum": 5
+                                                     },
+                                                     {
+                                                     "title": "soft",
+                                                     "minimum": -2.5,
+                                                     "maximum": 2.5
+                                                     }
+                                                     ]
+                                     }
+                                     ]
+                   },
+                   {
+                   "title": "Health",
+                   "subTitle": "All about a person's health",
+                   "image": "Health",
+                   "categoryItems": [
+                                     {
+                                     "title": "body temperature",
+                                     "crispValue": 0,
+                                     "fuzzyValues": [
+                                                     {
+                                                     "title": "boiling",
+                                                     "minimum": 7.5,
+                                                     "maximum": 12.5
+                                                     },
+                                                     {
+                                                     "title": "hot",
+                                                     "minimum": 5,
+                                                     "maximum": 10
+                                                     },
+                                                     {
+                                                     "title": "warm",
+                                                     "minimum": 2.5,
+                                                     "maximum": 7.5
+                                                     },
+                                                     {
+                                                     "title": "cold",
+                                                     "minimum": 0,
+                                                     "maximum": 5
+                                                     },
+                                                     {
+                                                     "title": "frosty",
+                                                     "minimum": -2.5,
+                                                     "maximum": 2.5
+                                                     }
+                                                     ]
+                                     },
+                                     {
+                                     "title": "health",
+                                     "crispValue": 4,
+                                     "fuzzyValues": [
+                                                     {
+                                                     "title": "excellent",
+                                                     "minimum": 7.5,
+                                                     "maximum": 12.5
+                                                     },
+                                                     {
+                                                     "title": "good",
+                                                     "minimum": 5,
+                                                     "maximum": 10
+                                                     },
+                                                     {
+                                                     "title": "well-adjusted",
+                                                     "minimum": 2.5,
+                                                     "maximum": 7.5
+                                                     },
+                                                     {
+                                                     "title": "reasonable",
+                                                     "minimum": 0,
+                                                     "maximum": 5
+                                                     },
+                                                     {
+                                                     "title": "poor",
+                                                     "minimum": -2.5,
+                                                     "maximum": 2.5
+                                                     }
+                                                     ]
+                                     },
+                                     {
+                                     "title": "fitness",
+                                     "crispValue": 0,
+                                     "fuzzyValues": [
+                                                     {
+                                                     "title": "excellent",
+                                                     "minimum": 7.5,
+                                                     "maximum": 12.5
+                                                     },
+                                                     {
+                                                     "title": "good",
+                                                     "minimum": 5,
+                                                     "maximum": 10
+                                                     },
+                                                     {
+                                                     "title": "average",
+                                                     "minimum": 2.5,
+                                                     "maximum": 7.5
+                                                     },
+                                                     {
+                                                     "title": "lacking",
+                                                     "minimum": 0,
+                                                     "maximum": 5
+                                                     },
+                                                     {
+                                                     "title": "out of shape",
+                                                     "minimum": -2.5,
+                                                     "maximum": 2.5
+                                                     }
+                                                     ]
+                                     }
+                                     ]
+                   },
+                   {
+                   "title": "Restaurant",
+                   "subTitle": "Food, service and tips in a restaurant",
+                   "image": "Restaurant",
+                   "categoryItems": [
+                                     {
+                                     "title": "food",
+                                     "crispValue": 0,
+                                     "fuzzyValues": [
+                                                     {
+                                                     "title": "delicious",
+                                                     "minimum": 7.5,
+                                                     "maximum": 12.5
+                                                     },
+                                                     {
+                                                     "title": "good",
+                                                     "minimum": 5,
+                                                     "maximum": 10
+                                                     },
+                                                     {
+                                                     "title": "average",
+                                                     "minimum": 2.5,
+                                                     "maximum": 7.5
+                                                     },
+                                                     {
+                                                     "title": "bad",
+                                                     "minimum": 0,
+                                                     "maximum": 5
+                                                     },
+                                                     {
+                                                     "title": "rancid",
+                                                     "minimum": -2.5,
+                                                     "maximum": 2.5
+                                                     }
+                                                     ]
+                                     },
+                                     {
+                                     "title": "tip",
+                                     "crispValue": 6,
+                                     "fuzzyValues": [
+                                                     {
+                                                     "title": "generous",
+                                                     "minimum": 7.5,
+                                                     "maximum": 12.5
+                                                     },
+                                                     {
+                                                     "title": "good",
+                                                     "minimum": 5,
+                                                     "maximum": 10
+                                                     },
+                                                     {
+                                                     "title": "average",
+                                                     "minimum": 2.5,
+                                                     "maximum": 7.5
+                                                     },
+                                                     {
+                                                     "title": "bad",
+                                                     "minimum": 0,
+                                                     "maximum": 5
+                                                     },
+                                                     {
+                                                     "title": "cheap",
+                                                     "minimum": -2.5,
+                                                     "maximum": 2.5
+                                                     }
+                                                     ]
+                                     },
+                                     {
+                                     "title": "service",
+                                     "crispValue": 0,
+                                     "fuzzyValues": [
+                                                     {
+                                                     "title": "torrential",
+                                                     "minimum": 7.5,
+                                                     "maximum": 12.5
+                                                     },
+                                                     {
+                                                     "title": "hard",
+                                                     "minimum": 5,
+                                                     "maximum": 10
+                                                     },
+                                                     {
+                                                     "title": "wet",
+                                                     "minimum": 2.5,
+                                                     "maximum": 7.5
+                                                     },
+                                                     {
+                                                     "title": "gentle",
+                                                     "minimum": 0,
+                                                     "maximum": 5
+                                                     },
+                                                     {
+                                                     "title": "soft",
+                                                     "minimum": -2.5,
+                                                     "maximum": 2.5
+                                                     }
+                                                     ]
+                                     }
+                                     ]
+                   }
+                   ]
 }

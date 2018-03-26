@@ -18,7 +18,7 @@ class RuleEvaluationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.categories = Category.getExampleCategories()
+        self.categories = Category.readExampleCategories() ?? Category.getExampleCategories()
         configure(tableView: self.tableView)
         self.rules = readFromCSVFile(rules: rules)
         sortRulesBySupport()

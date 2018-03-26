@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+///helper methods to lock orientation in a view
 struct AppUtility {
     
     static func lockOrientation(_ orientation: UIInterfaceOrientationMask) {
@@ -18,7 +19,7 @@ struct AppUtility {
         }
     }
     
-    /// OPTIONAL Added method to adjust lock and rotate to the desired orientation
+    ///  Added method to adjust lock and rotate to the desired orientation
     static func lockOrientation(_ orientation: UIInterfaceOrientationMask, andRotateTo rotateOrientation:UIInterfaceOrientation) {
         
         self.lockOrientation(orientation)

@@ -10,6 +10,7 @@ import Foundation
 
 import UIKit
 
+/// Provides a custom blue color.
 extension UIColor {
     
     // MARK: - Standard-Coloring-Colored

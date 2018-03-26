@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// A TableViewCell which represents a CategoryItem or FuzzyValue when picking a rule part.
 class CategoryItemTableViewCell: UITableViewCell {
     
     @IBOutlet weak var label: UILabel!
@@ -15,7 +16,6 @@ class CategoryItemTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,7 +23,6 @@ class CategoryItemTableViewCell: UITableViewCell {
         
         view.layer.cornerRadius = 15.0
         view.clipsToBounds = true
-        // Configure the view for the selected state
     }
     
 }

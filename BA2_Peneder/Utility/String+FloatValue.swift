@@ -8,7 +8,10 @@
 
 import Foundation
 
+
 extension String {
+    
+    /// additional property floatValue which translates a string to a float value taking the different ways of expressing a decimal of a number. This decimal can either be a comma or a period.
     public var floatValue: Float {
         let nf = NumberFormatter()
         nf.decimalSeparator = "."

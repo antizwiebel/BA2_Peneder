@@ -23,6 +23,7 @@ public class Rule: CustomStringConvertible {
     public var ruleImage: UIImage?
     /// The degree of support for a rule's consequent, calculated by using defuzzification
     public var degreeOfSupport: Double?
+    
     /// Initializes a new rule with a given array of antecedents, their associated operators and a consequent
     init(antecedents: [RulePart], consequent: RulePart, logicalOperators: [LogicalOperator]) {
         self.antecedents = antecedents

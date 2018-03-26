@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// A TableViewCell which shows a rule and its evaluation in the rule evaluation table.
 class EvaluatedRuleTableViewCell: UITableViewCell {
 
     @IBOutlet weak var degreeOfSupportLabel: UILabel!

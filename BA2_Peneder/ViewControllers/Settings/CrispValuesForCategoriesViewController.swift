@@ -17,7 +17,7 @@ class CrispValuesForCategoriesViewController: CollapsibleTableSectionViewControl
         super.viewDidLoad()
         self.delegate = self
         self.navigationItem.title = "Select Crisp Values"
-        self.categories = Category.getExampleCategories()
+        self.categories = Category.readExampleCategories() ?? Category.getExampleCategories()
     }
 
     override func didReceiveMemoryWarning() {

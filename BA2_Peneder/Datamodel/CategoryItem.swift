@@ -19,6 +19,7 @@ public class CategoryItem {
     /// the crisp value of the item/variable, set by the user
     public var crispValue: Float?
     
+    ///Standard initializer
     init() {
         title = "N/A"
         fuzzyValues = [FuzzyValue]()

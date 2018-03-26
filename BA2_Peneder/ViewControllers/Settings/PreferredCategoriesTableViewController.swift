@@ -23,7 +23,7 @@ class PreferredCategoriesTableViewController: UITableViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView(frame: .zero)
-        self.categories = Category.getExampleCategories()
+        self.categories = Category.readExampleCategories() ?? Category.getExampleCategories()
         retrievePreferredCategories()
     }
 

@@ -24,6 +24,7 @@ public class Category {
     /// A striking image that helps to visually identify a category at a glance
     public var image: UIImage?
     
+    ///Standard initializer
     init() {
         self.categoryItems = [CategoryItem]()
     }

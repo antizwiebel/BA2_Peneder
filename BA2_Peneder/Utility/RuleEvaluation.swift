@@ -8,11 +8,21 @@
 
 import Foundation
 
-public class MembershipCalculator {
+/// Provides various methods to evaluate rules and arrive at a truth value for a rule.
+public class RuleEvaluation {
     
+    /**
+     Defuzzifies a given rule with an array of crisp values.
+     
+     - Parameters:
+     - rule: the rule that needs to be defuzzified
+     - crispValues: an array of crisp values that are used to defuzzify each antecedent of a rule.
+     
+     - Returns: The "truth value" of a rule, ranging from 0 to 1.
+    */
     public static func defuzzifyRule (rule: Rule, crispValues: [Float]) -> Double{
-        
         var memberships = [Double]()
+        
         for index in 0...rule.antecedents!.count-1 {
             let fuzzyValue = rule.antecedents![index].fuzzyValue
             memberships.append(calculateMembership(x: crispValues[index], a: fuzzyValue.minimum, b: (fuzzyValue.maximum + fuzzyValue.minimum) / 2, c: fuzzyValue.maximum))
@@ -27,6 +37,15 @@ public class MembershipCalculator {
         return defuzzifiedValue
     }
     
+    /**
+    Unites two given membership values with a given LogicalOperator. For AND the minimum is returned and for OR the maximum.
+     - Parameters:
+     - membership1: the first membership value
+     - membership2: the second membership value
+     - logicalOperator: the logical operator which connects the two values
+
+     - Returns: the unified membership value.
+    */
     static func logicalRelation(membership1: Double, membership2: Double, logicalOperator: LogicalOperator) -> Double {
         if logicalOperator == LogicalOperator.AND {
             //return min(membership1, membership2)

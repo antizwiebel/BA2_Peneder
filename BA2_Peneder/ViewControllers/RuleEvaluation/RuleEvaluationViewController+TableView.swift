@@ -69,7 +69,7 @@ extension RuleEvaluationViewController: UITableViewDelegate, UITableViewDataSour
             
             for index in 0...(antecedentCount-1) {
                 let fuzzyValue = rule.antecedents![index].fuzzyValue
-                var memberShip = MembershipCalculator.calculateMembership(x: crispValues[index], a: fuzzyValue.minimum, b: (fuzzyValue.maximum + fuzzyValue.minimum) / 2, c: fuzzyValue.maximum)
+                var memberShip = RuleEvaluation.calculateMembership(x: crispValues[index], a: fuzzyValue.minimum, b: (fuzzyValue.maximum + fuzzyValue.minimum) / 2, c: fuzzyValue.maximum)
                 memberShip =  round(100 * memberShip) / 100
 
                 if (index == 0) {
@@ -77,7 +77,7 @@ extension RuleEvaluationViewController: UITableViewDelegate, UITableViewDataSour
                 } else {
                      membershipsString = membershipsString + "\n\n" + String(format: "%.2f", memberShip)
                 }
-                print(MembershipCalculator.calculateMembership(x: crispValues[index], a: fuzzyValue.minimum, b: (fuzzyValue.maximum + fuzzyValue.minimum) / 2, c: fuzzyValue.maximum).description)
+                print(RuleEvaluation.calculateMembership(x: crispValues[index], a: fuzzyValue.minimum, b: (fuzzyValue.maximum + fuzzyValue.minimum) / 2, c: fuzzyValue.maximum).description)
             }
         }
         return membershipsString

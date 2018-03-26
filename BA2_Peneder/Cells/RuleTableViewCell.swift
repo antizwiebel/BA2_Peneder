@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// A TableViewCell which represents a rule in the rule overview table.
 class RuleTableViewCell: UITableViewCell {
    
     @IBOutlet weak var consequentLabel: UILabel!

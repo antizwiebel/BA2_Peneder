@@ -7,6 +7,7 @@
 //
 import UIKit
 
+///provides a class BlurView which allows adding blur effects to a view
 extension UIView {
     
     private struct AssociatedKeys {

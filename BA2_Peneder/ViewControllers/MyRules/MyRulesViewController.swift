@@ -21,8 +21,7 @@ class MyRulesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure(tableView: tableView)
-        self.exampleCategories = Category.getExampleCategories()
-        Category.readExampleCategories()
+        self.exampleCategories = Category.readExampleCategories() ?? Category.getExampleCategories()
         self.rules = readFromCSVFile(rules: rules)
         self.tableView.reloadData()
     }

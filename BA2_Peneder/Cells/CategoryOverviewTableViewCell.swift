@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// A TableViewCell which represents a Category when picking a rule part.
 class CategoryOverviewTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subTitleLabel: UILabel!

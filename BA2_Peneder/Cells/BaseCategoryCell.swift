@@ -9,7 +9,9 @@
 import UIKit
 import CoreMotion
 
+/// The base cell for a category containing helper methods for handling gestures and shadows.
 class BaseCategoryCell: UICollectionViewCell {
+    
     internal static let cellHeight: CGFloat = 300
     
     private static let kInnerMargin: CGFloat = 20.0

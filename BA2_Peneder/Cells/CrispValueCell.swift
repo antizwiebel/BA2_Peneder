@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+/// A TableViewCell which represents a crisp value in the crisp value settings view.
 class CrispValueCell: UITableViewCell {
     
     let nameLabel = UILabel()

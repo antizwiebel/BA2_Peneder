@@ -10,7 +10,15 @@ import Foundation
 import UIKit
 import CSV
 
+/// utility for creating and reading rule csv files
 extension UIViewController {
+    
+    /**
+     Creates a csv file on the device's file system containing all the given rules in the specified rule format.
+     
+     - Parameters:
+     - rules: The rules to be saved in the file
+    */
     func createCSVFile (rules: [Rule]?) {
         let fileName = "myRules.csv"
         if let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
@@ -43,8 +51,13 @@ extension UIViewController {
         }
     }
     
+    /**
+     Reads from a csv file on the device's file system containing rules in the specified rule format.
+     
+     - Returns: The rules retrieved from the file
+     */
     func readFromCSVFile(rules: [Rule]?)  -> [Rule]{
-        //HEADER: variable,hedge,fuzzyValue,operator
+        //HEADER format: variable,hedge,fuzzyValue,operator
         
         let stream = InputStream(url: (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("myRules.csv"))!)
         
@@ -71,7 +84,7 @@ extension UIViewController {
                 case "END":
                     readRule.antecedents?.append(RulePart (variable: csv["variable"]!, hedge: csv["hedge"]!, fuzzyValue: getFuzzyValueForTitle(title: csv["fuzzyValue"]!, fuzzyValues: fuzzyValues)))
                     //calculate degree of support for read rule
-                    readRule.degreeOfSupport = MembershipCalculator.defuzzifyRule(rule: readRule, crispValues: getCrispValuesForRule(rule: readRule))
+                    readRule.degreeOfSupport = RuleEvaluation.defuzzifyRule(rule: readRule, crispValues: getCrispValuesForRule(rule: readRule))
                     readRules.append(readRule)
                     readRule = Rule()
                 default:
@@ -85,7 +98,7 @@ extension UIViewController {
     }
     
     func getCrispValuesForRule (rule: Rule) -> [Float] {
-        let categories = Category.getExampleCategories()
+        let categories = Category.readExampleCategories() ?? Category.getExampleCategories()
         var crispValues = [Float]()
         for antecedent in rule.antecedents! {
             for category in categories {
