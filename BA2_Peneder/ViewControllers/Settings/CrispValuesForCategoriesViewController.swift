@@ -62,14 +62,19 @@ class CrispValuesForCategoriesViewController: CollapsibleTableSectionViewControl
         let selectedCategoryItem = self.categories[indexPath.section].categoryItems[indexPath.row]
         let minimumFuzzyValue = self.getMinimumOfFuzzyValuesForItem(categoryItem: selectedCategoryItem)
         let maximumFuzzyValue = self.getMaximumOfFuzzyValuesForItem(categoryItem: selectedCategoryItem)
+        var message: String
         //Create the alert controller.
-        let message = "From " + String(minimumFuzzyValue) + " (lowest) to " + String(maximumFuzzyValue) + " (highest)"
+        if minimumFuzzyValue == -2.5 {
+            message = "From 0 (lowest) to 10 (highest)"
+        } else {
+            message = "From " + String(minimumFuzzyValue) + " (lowest) to " + String(maximumFuzzyValue) + " (highest)"
+        }
         let alert = UIAlertController(title: "Select crisp value for " + (cell.nameLabel.text ?? "N/A"), message: message, preferredStyle: .alert)
         
         //Add the text field.
         alert.addTextField { (textField: UITextField) in
             textField.text = cell.crispValueLabel.text ?? "0"
-            textField.keyboardType = UIKeyboardType.decimalPad
+            textField.keyboardType = UIKeyboardType.numbersAndPunctuation //.decimalPad
         }
         
         let saveAction = UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
@@ -99,13 +104,18 @@ class CrispValuesForCategoriesViewController: CollapsibleTableSectionViewControl
     }
     
     func isValidCrispValue(valueString: String, minimum: Double, maximum: Double) -> Bool {
-        if minimum == -2.5 { // needed for 0-10 range, since we dont actually want users to input until -2.5 but the membership function is defined that way to correctly represent 0s and 10s
-            return valueString.floatValue >= 0 && valueString.floatValue <= 10
-        } else if minimum != Double.nan && maximum != Double.nan {
-            return valueString.floatValue >= Float(minimum) && valueString.floatValue <= Float(maximum)
+        // check if string is valid floating value
+        if valueString.floatValue != Float.nan {
+            if minimum == -2.5 { // needed for 0-10 range, since we dont actually want users to input until -2.5 but the membership function is defined that way to correctly represent 0s and 10s
+                return valueString.floatValue >= 0 && valueString.floatValue <= 10
+            } else if minimum != Double.nan && maximum != Double.nan {
+                return valueString.floatValue >= Float(minimum) && valueString.floatValue <= Float(maximum)
+            } else {
+                //always set to true, if minimum or maximum was nan to allow any value
+                return true
+            }
         } else {
-            //always set to true, if minimum or maximum was nan to allow any value
-            return true
+            return false
         }
     }
     

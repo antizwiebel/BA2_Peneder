@@ -23,6 +23,11 @@ extension String {
                 return result.floatValue
             }
         }
-        return 0
+        return Float.nan
+    }
+    
+    /// checks if a string is a numer
+    var isNumber: Bool {
+        return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
     }
 }
