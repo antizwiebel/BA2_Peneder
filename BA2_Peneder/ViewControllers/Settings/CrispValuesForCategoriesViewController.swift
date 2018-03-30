@@ -59,8 +59,12 @@ class CrispValuesForCategoriesViewController: CollapsibleTableSectionViewControl
     func collapsibleTableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! CrispValueCell
 
+        let selectedCategoryItem = self.categories[indexPath.section].categoryItems[indexPath.row]
+        let minimumFuzzyValue = self.getMinimumOfFuzzyValuesForItem(categoryItem: selectedCategoryItem)
+        let maximumFuzzyValue = self.getMaximumOfFuzzyValuesForItem(categoryItem: selectedCategoryItem)
         //Create the alert controller.
-        let alert = UIAlertController(title: "Select crisp value for " + (cell.nameLabel.text ?? "N/A"), message: "From 0-10, from lowest/coldest to highest/hottest", preferredStyle: .alert)
+        let message = "From " + String(minimumFuzzyValue) + " (lowest) to " + String(maximumFuzzyValue) + " (highest)"
+        let alert = UIAlertController(title: "Select crisp value for " + (cell.nameLabel.text ?? "N/A"), message: message, preferredStyle: .alert)
         
         //Add the text field.
         alert.addTextField { (textField: UITextField) in
@@ -72,8 +76,8 @@ class CrispValuesForCategoriesViewController: CollapsibleTableSectionViewControl
             let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
             let value = textField!.text!.floatValue
             let userDefaults = UserDefaults.standard
-            self.categories[indexPath.section].categoryItems[indexPath.row].crispValue = value
-            userDefaults.set(value, forKey: self.categories[indexPath.section].title+self.categories[indexPath.section].categoryItems[indexPath.row].title)
+            selectedCategoryItem.crispValue = value
+            userDefaults.set(value, forKey: self.categories[indexPath.section].title+selectedCategoryItem.title)
             print(value.description)
         })
         
@@ -82,12 +86,11 @@ class CrispValuesForCategoriesViewController: CollapsibleTableSectionViewControl
         NotificationCenter.default.addObserver(forName: NSNotification.Name.UITextFieldTextDidChange, object:alert.textFields?[0], queue: OperationQueue.main) { (notification) -> Void in
             
             let textFieldValue = alert.textFields![0]
-            saveAction.isEnabled = self.isValidCrispValue(valueString: textFieldValue.text!) &&  !textFieldValue.text!.isEmpty
+            saveAction.isEnabled = self.isValidCrispValue(valueString: textFieldValue.text!, minimum: minimumFuzzyValue, maximum: maximumFuzzyValue) &&  !textFieldValue.text!.isEmpty
         }
         
         //Grab the value from the text field, and save the crisp value when user presses OK.
         alert.addAction(saveAction)
-        
         
         //Present the alert.
         self.present(alert, animated: true, completion: nil)
@@ -95,8 +98,41 @@ class CrispValuesForCategoriesViewController: CollapsibleTableSectionViewControl
         self.viewDidLoad()
     }
     
-    func isValidCrispValue(valueString: String) -> Bool {
-        return valueString.floatValue >= 0 && valueString.floatValue <= 10
+    func isValidCrispValue(valueString: String, minimum: Double, maximum: Double) -> Bool {
+        if minimum == -2.5 { // needed for 0-10 range, since we dont actually want users to input until -2.5 but the membership function is defined that way to correctly represent 0s and 10s
+            return valueString.floatValue >= 0 && valueString.floatValue <= 10
+        } else if minimum != Double.nan && maximum != Double.nan {
+            return valueString.floatValue >= Float(minimum) && valueString.floatValue <= Float(maximum)
+        } else {
+            //always set to true, if minimum or maximum was nan to allow any value
+            return true
+        }
+    }
+    
+    internal func getMinimumOfFuzzyValuesForItem(categoryItem: CategoryItem) -> Double {
+        if categoryItem.fuzzyValues.isEmpty == false {
+            var minimum: Double = categoryItem.fuzzyValues.first!.minimum
+            for fuzzyValue in categoryItem.fuzzyValues {
+                if minimum > fuzzyValue.minimum {
+                    minimum = fuzzyValue.minimum
+                }
+            }
+            return minimum
+        }
+        return Double.nan
+    }
+    
+    internal func getMaximumOfFuzzyValuesForItem(categoryItem: CategoryItem) -> Double {
+        if categoryItem.fuzzyValues.isEmpty == false {
+            var maximum: Double = categoryItem.fuzzyValues.first!.maximum
+            for fuzzyValue in categoryItem.fuzzyValues {
+                if maximum < fuzzyValue.maximum {
+                    maximum = fuzzyValue.maximum
+                }
+            }
+            return maximum
+        }
+        return Double.nan
     }
     /*
     // MARK: - Navigation

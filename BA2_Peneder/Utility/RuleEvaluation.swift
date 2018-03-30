@@ -1,5 +1,5 @@
 //
-//  wichser.swift
+//  RuleEvaluation.swift
 //  BA2_Peneder
 //
 //  Created by Mark Peneder on 08.03.18.
@@ -18,23 +18,30 @@ public class RuleEvaluation {
      - rule: the rule that needs to be defuzzified
      - crispValues: an array of crisp values that are used to defuzzify each antecedent of a rule.
      
-     - Returns: The "truth value" of a rule, ranging from 0 to 1.
+     - Returns: The "truth value" of a rule, ranging from 0 to 1 or -1 if there was an error.
     */
     public static func defuzzifyRule (rule: Rule, crispValues: [Float]) -> Double{
         var memberships = [Double]()
-        
-        for index in 0...rule.antecedents!.count-1 {
-            let fuzzyValue = rule.antecedents![index].fuzzyValue
-            memberships.append(calculateMembership(x: crispValues[index], a: fuzzyValue.minimum, b: (fuzzyValue.maximum + fuzzyValue.minimum) / 2, c: fuzzyValue.maximum))
-        }
-        var defuzzifiedValue = memberships.first!
-        if rule.antecedents?.count ?? 0 > 1  {
-            for index in 1...(rule.logicalOperators?.count)!-1 {
-                defuzzifiedValue = logicalRelation(membership1: defuzzifiedValue, membership2: memberships[index], logicalOperator: rule.logicalOperators![index])
-                print(defuzzifiedValue)
+        if let antecedents = rule.antecedents {
+            var defuzzifiedValue: Double = -1
+            if antecedents.isEmpty == false {
+                for index in 0...antecedents.count-1 {
+                    let fuzzyValue = antecedents[index].fuzzyValue
+                    memberships.append(calculateMembership(x: crispValues[index], a: fuzzyValue.minimum, b: (fuzzyValue.maximum + fuzzyValue.minimum) / 2, c: fuzzyValue.maximum))
+                }
+                defuzzifiedValue = memberships.first ?? -1
+                if antecedents.count > 1  && rule.logicalOperators?.count ?? 0 > 0  {
+                    for index in 1...(rule.logicalOperators?.count)!-1 {
+                        defuzzifiedValue = logicalRelation(membership1: defuzzifiedValue, membership2: memberships[index], logicalOperator: rule.logicalOperators![index])
+                        print(defuzzifiedValue)
+                    }
+                }
             }
+            return defuzzifiedValue
+        } else {
+            //antecedents are nil
+            return -1
         }
-        return defuzzifiedValue
     }
     
     /**

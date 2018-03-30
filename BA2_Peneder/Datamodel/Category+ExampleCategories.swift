@@ -27,7 +27,7 @@ extension Category {
                     var readCategory = Category()
                     for category in jsonObj["categories"].arrayValue {
                         readCategory.title =  category["title"].stringValue
-                        readCategory.subTitle =  category["title"].stringValue
+                        readCategory.subTitle =  category["subTitle"].stringValue
                         readCategory.image = UIImage(named: category["image"].stringValue)
                         readCategory.categoryItems = readCategoryItemsFromArray(categoryItemArray: category["categoryItems"].arrayValue)
                         readCategories.append(readCategory)

@@ -83,34 +83,6 @@ class MyRulesViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    func getExampleRules() -> [Rule] {
-        var rules = [Rule]()
-        
-        let fuzzyValues = FuzzyValue.retrieveExampleFuzzyValues()
-        
-        
-        let coldIndex = fuzzyValues.index(where: { (item: FuzzyValue) -> Bool in
-            item.title == "cold" // test if this is the item you're looking for
-        })
-        let icyIndex = fuzzyValues.index(where: { (item: FuzzyValue) -> Bool in
-            item.title == "icy" // test if this is the item you're looking for
-        })
-        let poorIndex = fuzzyValues.index(where: { (item: FuzzyValue) -> Bool in
-            item.title == "poor" // test if this is the item you're looking for
-        })
-        //health category
-        let antecedent1 = RulePart (variable: "body temperature", hedge: "", fuzzyValue: fuzzyValues[coldIndex ?? 0] )
-        let antecedent2 = RulePart (variable: "temperature", hedge: "", fuzzyValue: fuzzyValues[icyIndex ?? 0] )
-        
-        let antecedents = [antecedent1, antecedent2, antecedent2, antecedent2, antecedent2]
-        
-        rules.append(Rule(antecedents: antecedents, consequent: RulePart(variable: "running", hedge: "", fuzzyValue: fuzzyValues[poorIndex ?? 0] ), logicalOperators: [LogicalOperator.AND, LogicalOperator.OR, LogicalOperator.OR,LogicalOperator.OR,LogicalOperator.OR,]))
-        rules.append(Rule(antecedents: antecedents, consequent: RulePart(variable: "cycling", hedge: "", fuzzyValue: fuzzyValues[poorIndex ?? 0] ), logicalOperators: [LogicalOperator.AND, LogicalOperator.OR, LogicalOperator.OR,LogicalOperator.OR,LogicalOperator.OR,]))
-        
-        return rules
-    }
-    
-    
     
     // MARK: - Navigation
 

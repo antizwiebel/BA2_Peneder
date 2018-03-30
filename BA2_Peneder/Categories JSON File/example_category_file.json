@@ -172,60 +172,34 @@
                                      "crispValue": 0,
                                      "fuzzyValues": [
                                                      {
-                                                     "title": "boiling",
-                                                     "minimum": 7.5,
-                                                     "maximum": 12.5
+                                                     "title": "scorching",
+                                                     "minimum": 25,
+                                                     "maximum": 65
                                                      },
                                                      {
                                                      "title": "hot",
-                                                     "minimum": 5,
-                                                     "maximum": 10
-                                                     },
-                                                     {
-                                                     "title": "warm",
-                                                     "minimum": 2.5,
-                                                     "maximum": 7.5
-                                                     },
-                                                     {
-                                                     "title": "cold",
-                                                     "minimum": 0,
-                                                     "maximum": 5
-                                                     },
-                                                     {
-                                                     "title": "icy",
-                                                     "minimum": -2.5,
-                                                     "maximum": 2.5
-                                                     }
-                                                     ]
-                                     },
-                                     {
-                                     "title": "weather",
-                                     "crispValue": 4,
-                                     "fuzzyValues": [
-                                                     {
-                                                     "title": "hot",
-                                                     "minimum": 7.5,
-                                                     "maximum": 12.5
+                                                     "minimum": 15,
+                                                     "maximum": 40
                                                      },
                                                      {
                                                      "title": "warm",
                                                      "minimum": 5,
-                                                     "maximum": 10
+                                                     "maximum": 35
                                                      },
                                                      {
                                                      "title": "fresh",
-                                                     "minimum": 2.5,
-                                                     "maximum": 7.5
+                                                     "minimum": -5,
+                                                     "maximum": 25
                                                      },
                                                      {
                                                      "title": "cold",
-                                                     "minimum": 0,
-                                                     "maximum": 5
+                                                     "minimum": -25,
+                                                     "maximum": 10
                                                      },
                                                      {
                                                      "title": "frosty",
-                                                     "minimum": -2.5,
-                                                     "maximum": 2.5
+                                                     "minimum": -55,
+                                                     "maximum": -10
                                                      }
                                                      ]
                                      },
@@ -269,32 +243,32 @@
                    "categoryItems": [
                                      {
                                      "title": "body temperature",
-                                     "crispValue": 0,
+                                     "crispValue": 37,
                                      "fuzzyValues": [
                                                      {
                                                      "title": "boiling",
-                                                     "minimum": 7.5,
-                                                     "maximum": 12.5
+                                                     "minimum": 39,
+                                                     "maximum": 45
                                                      },
                                                      {
                                                      "title": "hot",
-                                                     "minimum": 5,
-                                                     "maximum": 10
+                                                     "minimum": 37.5,
+                                                     "maximum": 42
                                                      },
                                                      {
-                                                     "title": "warm",
-                                                     "minimum": 2.5,
-                                                     "maximum": 7.5
+                                                     "title": "normal",
+                                                     "minimum": 36,
+                                                     "maximum": 38
                                                      },
                                                      {
                                                      "title": "cold",
-                                                     "minimum": 0,
-                                                     "maximum": 5
+                                                     "minimum": 31,
+                                                     "maximum": 36.5
                                                      },
                                                      {
-                                                     "title": "frosty",
-                                                     "minimum": -2.5,
-                                                     "maximum": 2.5
+                                                     "title": "freezing",
+                                                     "minimum": 22,
+                                                     "maximum": 33.5
                                                      }
                                                      ]
                                      },

@@ -62,18 +62,33 @@ extension FuzzyValue {
         }
     }
     
+    public static func retrieveFuzzyValuesFromCategoryFile() -> [FuzzyValue]? {
+        if let categories = Category.readExampleCategories() {
+            var fuzzyValues = [FuzzyValue]()
+            for category in categories {
+                for categoryItem in category.categoryItems {
+                    for fuzzyValue in categoryItem.fuzzyValues {
+                        fuzzyValues.append(fuzzyValue)
+                    }
+                }
+            }
+            return fuzzyValues
+        } else {
+            return nil
+        }
+    }
+    
     public static func retrieveExampleFuzzyValues()  -> [FuzzyValue] {
         //HEADER: title,minimum,maximum
         
         let stream = InputStream(url: (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("exampleFuzzyValues.csv"))!)
-        let csv = try! CSVReader(stream: stream!, hasHeaderRow: true)
-        print(csv.headerRow ?? "empty header!")
-        
         var readFuzzyValues = [FuzzyValue]()
-        while csv.next() != nil {            
-            readFuzzyValues.append(FuzzyValue(title: csv["title"]!, minimum:  (csv["minimum"]! as NSString).doubleValue, maximum:  (csv["maximum"]! as NSString).doubleValue))
+        if let csv = try? CSVReader(stream: stream!, hasHeaderRow: true) {
+            print(csv.headerRow ?? "empty header!")
+            while csv.next() != nil {
+                readFuzzyValues.append(FuzzyValue(title: csv["title"]!, minimum:  (csv["minimum"]! as NSString).doubleValue, maximum:  (csv["maximum"]! as NSString).doubleValue))
+            }
         }
-        print (readFuzzyValues)
         return readFuzzyValues
     }
     
