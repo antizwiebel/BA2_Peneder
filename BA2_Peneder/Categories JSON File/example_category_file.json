@@ -408,27 +408,27 @@
                                      "crispValue": 0,
                                      "fuzzyValues": [
                                                      {
-                                                     "title": "torrential",
+                                                     "title": "excellent",
                                                      "minimum": 7.5,
                                                      "maximum": 12.5
                                                      },
                                                      {
-                                                     "title": "hard",
+                                                     "title": "good",
                                                      "minimum": 5,
                                                      "maximum": 10
                                                      },
                                                      {
-                                                     "title": "wet",
+                                                     "title": "average",
                                                      "minimum": 2.5,
                                                      "maximum": 7.5
                                                      },
                                                      {
-                                                     "title": "gentle",
+                                                     "title": "bad",
                                                      "minimum": 0,
                                                      "maximum": 5
                                                      },
                                                      {
-                                                     "title": "soft",
+                                                     "title": "poor",
                                                      "minimum": -2.5,
                                                      "maximum": 2.5
                                                      }
