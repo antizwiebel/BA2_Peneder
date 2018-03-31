@@ -93,6 +93,10 @@ class CrispValuesForCategoriesViewController: CollapsibleTableSectionViewControl
             let textFieldValue = alert.textFields![0]
             saveAction.isEnabled = self.isValidCrispValue(valueString: textFieldValue.text!, minimum: minimumFuzzyValue, maximum: maximumFuzzyValue) &&  !textFieldValue.text!.isEmpty
         }
+        // add cancel button
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.default, handler: { action in
+            print("Cancel pressed!")
+        }))
         
         //Grab the value from the text field, and save the crisp value when user presses OK.
         alert.addAction(saveAction)
